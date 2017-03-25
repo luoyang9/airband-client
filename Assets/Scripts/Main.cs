@@ -11,8 +11,9 @@ public class Main : MonoBehaviour {
 
 	Track[] tracks;
 	ArrayList players;
+	bool client_ready;
 
-	Track currentTrack;
+	Track currentTrack;	// For challenges
 
 	string clientID;
 
@@ -32,6 +33,8 @@ public class Main : MonoBehaviour {
 		socket.On ("rockon:note", onRockOnNote);
 		socket.On ("rockon:track", onRockOnStart);
 		socket.On ("challenge:join", onJoinChallenge);
+		socket.On ("challenge:ready", onChallengeReady);
+		socket.On ("challenge:note", onChallengeNote);
 
 
 	}
@@ -82,10 +85,67 @@ public class Main : MonoBehaviour {
 	private void onJoinChallenge(SocketIOEvent e){
 		clientID = e.data.GetField ("you").ToString ();
 		players = new ArrayList(JsonUtility.FromJson<ChallengePlayer[]>(e.data.GetField("players").ToString()));
-
+		// next step
 	}
 	private void onNewPlayerJoin(SocketIOEvent e){
-		
+		ChallengePlayer newPlayer = JsonUtility.FromJson<ChallengePlayer> (e.data.GetField ("player").ToString ());
+		players.Add (newPlayer);
+		// refresh display;
+	}
+
+	public void challengeReady(bool ready, int track_id){
+		client_ready = ready;
+		JSONObject data = new JSONObject ();
+		data.AddField ("is_ready", ready);
+		data.AddField ("track_id", track_id);
+
+		socket.Emit ("challenge:ready", data);
+	}
+
+	private void onChallengeReady(SocketIOEvent e){
+		string playerID = "";
+		bool is_ready = false;
+		int track_id = 0;
+
+		e.data.GetField (ref playerID, "player_id");
+		e.data.GetField (ref is_ready, "is_ready");
+		e.data.GetField (ref track_id, "track_id");
+
+		for (int x = 0; x < players.Count; x++) {
+			ChallengePlayer curr = (ChallengePlayer)players [x];
+			if (curr.id.Equals (playerID)) {
+				curr.is_ready = is_ready;
+				curr.track_id = track_id;
+				// update
+				return;
+			}
+		}
+		Debug.LogError ("The player with id " + playerID + " could not be found");
+	}
+
+	private void onChallengeNote(SocketIOEvent e){
+		string player_id = "";
+		int score = 0;
+		int note_id = 0;
+		bool is_pressed = true;
+
+		e.data.GetField (ref player_id, "player_id");
+		e.data.GetField (ref score, "score");
+		e.data.GetField (ref note_id, "note_id");
+		e.data.GetField (ref is_pressed, "is_pressed");
+
+		for (int x = 0; x < players.Count; x++) {
+			ChallengePlayer curr = (ChallengePlayer)players [x];
+			if (curr.id.Equals (player_id)) {
+				curr.score += score;
+				playNote (currentTrack.instrument, note_id, is_pressed);
+				// rerender
+				return;
+			}
+		}
+
+		Debug.LogError ("challenge player with id " + player_id + " couldn't be found");
+
 	}
 
 	public void noteHit(int note_id, bool is_pressed){
