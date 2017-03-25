@@ -53,13 +53,20 @@
      <Compile Include="Assets\LeapMotionVR\Scripts\Editor\EyeTypeEditor.cs" />
      <Compile Include="Assets\LeapMotionVR\Scripts\Editor\LeapCameraControlEditor.cs" />
      <Compile Include="Assets\LeapMotionVR\Scripts\Editor\LeapTemporalWarpingEditor.cs" />
+     <Compile Include="Assets\MySynthesizer\samples\scripts\Editor\MyEditor.cs" />
      <Compile Include="Assets\OVR\Moonlight\Editor\OVRMoonlightLoader.cs" />
+     <Compile Include="Assets\SocketIO\JSONObject\Editor\JSONChecker.cs" />
+     <None Include="Assets\SocketIO\JSONObject\readme.txt" />
      <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\LeapMotion\Resources\LeapCG.cginc" />
      <None Include="Assets\Plugins\Android\assets\donotdelete.txt" />
      <None Include="Assets\LeapMotion\README_BEFORE_UPDATING.txt" />
+     <None Include="Assets\MySynthesizer\tools\SMF2MyMML.txt" />
+     <None Include="Assets\MySynthesizer\tools\MyMMLChecker.txt" />
      <None Include="Assets\Plugins\x86_64\donotdelete.txt" />
+     <None Include="Assets\MySynthesizer\samples\mml\Flohwalzer.mml.txt" />
+     <None Include="Assets\MySynthesizer\documents\Reference.txt" />
      <None Include="Assets\LeapMotion\DemoResources\ScrollerText.txt" />
      <None Include="Assets\LeapMotion\readme.txt" />
      <None Include="Assets\OVR\Moonlight\Shaders\OVRColorRampAlpha.shader" />
@@ -70,13 +77,22 @@
      <None Include="Assets\OVR\Moonlight\Shaders\Unlit Crosshair.shader" />
      <None Include="Assets\LeapMotion\Resources\ThresholdOverlay.shader" />
      <None Include="Assets\OVR\Moonlight\Resources\Unlit Transparent Color.shader" />
+     <None Include="Assets\MySynthesizer\tools\ct8tone.mml.txt" />
+     <None Include="Assets\MySynthesizer\samples\mml\Hanazakari.mml.txt" />
      <None Include="Assets\LeapMotion\Resources\PassthroughForeground.shader" />
+     <None Include="Assets\SocketIO\Readme.txt" />
+     <None Include="Assets\MySynthesizer\tools\ct8drum.mml.txt" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Lighted.shader" />
      <None Include="Assets\LeapMotion\Resources\PassthroughBackground.shader" />
+     <None Include="Assets\MySynthesizer\documents\MyMMLManual.txt" />
      <None Include="Assets\LeapMotion\Widgets\Shaders\SelfIllumAlpha.shader" />
+     <None Include="Assets\MySynthesizer\documents\ReadMe.txt" />
+     <None Include="Assets\MySynthesizer\samples\mml\Sakura.mml.txt" />
+     <None Include="Assets\MySynthesizer\documents\Overview.txt" />
      <None Include="Assets\LeapMotion\Version.txt" />
      <None Include="Assets\Plugins\x86\donotdelete.txt" />
+     <None Include="Assets\MySynthesizer\samples\mml\test01.mml.txt" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
@@ -139,6 +155,9 @@
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/macstandalonesupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="MySynthesizer">
+ <HintPath>/Users/Janine/GitHub/LeapBand/Assets/MySynthesizer/plugins/MySynthesizer.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

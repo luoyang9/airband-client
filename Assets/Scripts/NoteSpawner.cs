@@ -13,7 +13,7 @@ public class NoteSpawner : MonoBehaviour {
 
 	ArrayList spawned_notes;
 
-	private int note_journey_time = 10000;
+	private int note_journey_time = 2000;
 
 
 	void Awake(){
@@ -27,7 +27,7 @@ public class NoteSpawner : MonoBehaviour {
 
 		travelPath = note_end - note_start;
 		Debug.Log (travelPath);
-		travelDelta = travelPath;// note_journey_time;
+		travelDelta = travelPath/ (note_journey_time/1000);
 		Debug.Log (travelDelta);
 
 		Debug.Log (note_start.ToString());
@@ -40,21 +40,6 @@ public class NoteSpawner : MonoBehaviour {
 	}
 		
 	void FixedUpdate(){
-		/*
-		for (int i = 0; i < spawned_notes.Count; i++) {
-			GameObject n = (GameObject)spawned_notes [i];
-
-			n.transform.localPosition += (travelDelta * Time.fixedDeltaTime);
-		}
-
-		if (spawned_notes.Count >= 1) {
-			GameObject firstNote = (GameObject)spawned_notes [0];
-
-			if (firstNote.transform.localPosition.z >= note_end.z) {
-				Destroy (firstNote);
-				spawned_notes.RemoveAt (0);
-			}
-		}*/
 	}
 
 	public void setJourneyTime(int time){

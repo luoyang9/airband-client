@@ -1,0 +1,17 @@
+﻿This program convert SMF(standard midi file "*.mid") to MyMML(*.mml.txt).
+
+Limitations.
+* Max 8 voices for each channel.
+* Output mml is not readable.
+* Resolution of quarter note is 32 steps.
+
+usage:
+> SMF2MyMML input.mid [-v] [-h] [-e 65001] [-p 2] [-o input.mml.txt] [-t ct8tone.mml.txt] [-d ct8drum.mml.txt] [-nd]
+-v: Verbose
+-h: Hit Any Key!
+-e: Code page ex.932=sjis,65001=utf8
+-p: Port (0~3)
+-o: Output to file
+-t: Tone map ex."$@(prg001)=ttt" 001~128
+-d: Drum map ex."$@(xxx)=ttt\n$(drm000)=$@(xxx)" 000~127
+-nd: Don't use ch10 for drum part

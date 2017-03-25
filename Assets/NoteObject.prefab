@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 136157300311013288}
   - component: {fileID: 23566276190521974}
   - component: {fileID: 54491700524930964}
-  - component: {fileID: 65727707165422862}
   - component: {fileID: 114823734503871382}
   m_Layer: 0
   m_Name: NoteObject
@@ -98,18 +97,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65727707165422862
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362703282422100}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114823734503871382
 MonoBehaviour:
   m_ObjectHideFlags: 1

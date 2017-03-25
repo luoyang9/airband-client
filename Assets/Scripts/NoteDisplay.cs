@@ -16,7 +16,7 @@ public class NoteDisplay : MonoBehaviour {
 	private float startTime;
 	private int noteIdx;
 
-	public int journeyTime = 10000;
+	public int journeyTime = 1000;
 
 	void Awake(){
 		

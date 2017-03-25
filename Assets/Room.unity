@@ -673,6 +673,16 @@ Prefab:
       propertyPath: note_spawns.Array.data[0]
       value: 
       objectReference: {fileID: 1161454813}
+    - target: {fileID: 114613278750155898, guid: eac03326cd1a749dd846c98f5674d537,
+        type: 2}
+      propertyPath: journeyTime
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 65873967610611912, guid: eac03326cd1a749dd846c98f5674d537,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eac03326cd1a749dd846c98f5674d537, type: 2}
   m_IsPrefabParent: 0

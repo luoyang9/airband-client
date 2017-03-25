@@ -1,0 +1,16 @@
+﻿usage:
+> MyMMLChecker input.mml.txt [-v] [-h] [-r path]
+> MyMMLChecker input.mml.txt [-v] [-h] [-r path] -o output.wav [-f 44100] [-b 16]
+> MyMMLChecker input.mml.txt [-v] [-h] [-r path] -p [-m 1.0]
+-v: verbose
+-h: Hit Any Key!
+-p: Play direct
+-m: master volume
+-o: Output to file
+-f: frequency
+-b: bps
+-r: resource data path
+
+port 0: FM tone(PM8)
+port 1: Sampling tone(SS8)
+port 2: Chiptune tone(CT8)
