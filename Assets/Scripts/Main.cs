@@ -81,7 +81,7 @@ public class Main : MonoBehaviour {
 
 	private void onJoinChallenge(SocketIOEvent e){
 		clientID = e.data.GetField ("you").ToString ();
-		players = JsonUtility.FromJson<ChallengePlayer[]>(e.data.GetField("players").ToString());
+		players = new ArrayList(JsonUtility.FromJson<ChallengePlayer[]>(e.data.GetField("players").ToString()));
 
 	}
 	private void onNewPlayerJoin(SocketIOEvent e){
@@ -98,7 +98,7 @@ public class Main : MonoBehaviour {
 	}
 
 	public void saveTrack(Track track){
-		JSONObject data = JsonUtility.ToJson (track);
+		JSONObject data = new JSONObject(JsonUtility.ToJson (track));
 		socket.Emit("rockon:track", data);
 	}
 		
@@ -107,7 +107,8 @@ public class Main : MonoBehaviour {
 	private void playNote(string instrument, int note_id, bool is_pressed){
 		for (int x = 0; x < instruments.Length; x++) {
 			if (((Instrument)instruments [x]).instrument_name.Equals (instrument)) {
-				(Instrument)instruments [x].playNote (note_id, is_pressed);
+				((Instrument)instruments [x]).playNote (note_id, is_pressed);
+			}
 		}
 	}
 			

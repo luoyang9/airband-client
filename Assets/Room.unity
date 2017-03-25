@@ -670,7 +670,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 010d39cbd03ee4c99a746c1f8ecdc0d8, type: 2}
       propertyPath: url
-      value: 
+      value: 192.168.2.11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 010d39cbd03ee4c99a746c1f8ecdc0d8, type: 2}
@@ -687,7 +687,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1197200184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d538543c17ad43078497caa22a1ffbb, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ee3febb9539c4a2481f0c8bd27356b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1214804517
