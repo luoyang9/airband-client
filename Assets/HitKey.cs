@@ -8,12 +8,11 @@ public class HitKey : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 
-	void OnTriggerStart(Collider col) {
-		if((col.transform.parent && col.transform.parent.parent && col.transform.parent.parent.GetComponent<HandModel>())) {
-			
+	void OnTriggerEnter(Collider col) {
+		if(col.name == "bone3"  && col.transform.parent.gameObject.name == "middle") {
+			audio.Play ();
 		}
 	}
 	
