@@ -476,6 +476,7 @@ PlayerSettings:
   vrEditorSettings: {}
   cloudServicesEnabled:
     Collab: 1
+    UNet: 1
   cloudProjectId: a0a7232f-3864-4b55-ba94-9eb79d987438
   projectName: LeapMotionCoreAssets
   organizationId: luoyang9
