@@ -178,6 +178,11 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRSceneSampleController.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRTrackerBounds.cs" />
+     <Compile Include="Assets\Scripts\Note.cs" />
+     <Compile Include="Assets\Scripts\NoteDisplay.cs" />
+     <Compile Include="Assets\Scripts\NoteObject.cs" />
+     <Compile Include="Assets\Scripts\NoteSpawner.cs" />
+     <Compile Include="Assets\Scripts\Track.cs" />
      <Compile Include="Assets\StartFreestyle.cs" />
      <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />
