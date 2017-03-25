@@ -46,6 +46,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\HiCenterCollisionHit.cs" />
+     <Compile Include="Assets\HiHitCollision.cs" />
+     <Compile Include="Assets\HitCollision.cs" />
+     <Compile Include="Assets\HitKey.cs" />
      <Compile Include="Assets\LeapMotion\DemoResources\Scripts\AerodynamicLeaf.cs" />
      <Compile Include="Assets\LeapMotion\DemoResources\Scripts\BugReporter.cs" />
      <Compile Include="Assets\LeapMotion\DemoResources\Scripts\ChangeMaterialOnGrab.cs" />
@@ -145,6 +149,7 @@
      <Compile Include="Assets\LeapMotionVR\Widgets\Scripts\DataBinderExamples\SliderToTextDataBinder.cs" />
      <Compile Include="Assets\LeapMotionVR\Widgets\Scripts\DataBinderExamples\ToggleToTextDataBinder.cs" />
      <Compile Include="Assets\LeapMotionVR\Widgets\Scripts\WidgetsEnabler.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\MySynthesizer\samples\scripts\GarbageCollector.cs" />
      <Compile Include="Assets\MySynthesizer\samples\scripts\GridButton.cs" />
      <Compile Include="Assets\MySynthesizer\samples\scripts\KeyProperty.cs" />
@@ -161,6 +166,9 @@
      <Compile Include="Assets\MySynthesizer\scripts\MyMMLClip.cs" />
      <Compile Include="Assets\MySynthesizer\scripts\MyMMLPlayer.cs" />
      <Compile Include="Assets\MySynthesizer\scripts\MySyntheStation.cs" />
+=======
+     <Compile Include="Assets\LoCenterCollisionHit.cs" />
+>>>>>>> bdc8fa64b74e5b88f63e827db4dd636c4e584374
      <Compile Include="Assets\OVR\Moonlight\Scripts\OVRDebugHeadController.cs" />
      <Compile Include="Assets\OVR\Moonlight\Scripts\OVROverlay.cs" />
      <Compile Include="Assets\OVR\Moonlight\Scripts\OVRPlatformMenu.cs" />
@@ -189,6 +197,7 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRSceneSampleController.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRTrackerBounds.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Note.cs" />
      <Compile Include="Assets\Scripts\NoteDisplay.cs" />
      <Compile Include="Assets\Scripts\NoteObject.cs" />
@@ -275,6 +284,9 @@
      <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketState.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketStream.cs" />
      <None Include="Assets\SocketIO\JSONObject\readme.txt" />
+=======
+     <Compile Include="Assets\StartFreestyle.cs" />
+>>>>>>> bdc8fa64b74e5b88f63e827db4dd636c4e584374
      <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\LeapMotion\Resources\LeapCG.cginc" />
