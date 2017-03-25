@@ -6,6 +6,7 @@ using AssemblyCSharp;
 
 namespace AssemblyCSharp
 {
+	[Serializable]
 	public class Track
 	{
 		public String id;

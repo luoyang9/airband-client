@@ -2,10 +2,10 @@
 
 namespace AssemblyCSharp
 {
-	public class Instrument
+	abstract class Instrument
 	{
 
-		String instrument_name;
+		public string instrument_name;
 		public Instrument (String instrument_name)
 		{
 			this.instrument_name = instrument_name;

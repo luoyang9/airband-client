@@ -2,6 +2,7 @@
 
 namespace AssemblyCSharp
 {
+	[Serializable]
 	public class Note
 	{
 		public int id;
