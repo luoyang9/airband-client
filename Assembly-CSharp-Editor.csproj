@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F99E06FC-E6AF-36DC-6692-8910E66DF38A}</ProjectGuid>
+    <ProjectGuid>{9FDFC437-B06B-D325-F13A-50C26F4CE102}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -142,13 +142,16 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="AssetStoreTools">
- <HintPath>/Users/czhang/Development/VR-Instruments/Assets/AssetStoreTools/Editor/AssetStoreTools.dll</HintPath>
+ <HintPath>/Users/Janine/GitHub/LeapBand/Assets/AssetStoreTools/Editor/AssetStoreTools.dll</HintPath>
  </Reference>
  <Reference Include="AssetStoreToolsExtra">
- <HintPath>/Users/czhang/Development/VR-Instruments/Assets/AssetStoreTools/Editor/AssetStoreToolsExtra.dll</HintPath>
+ <HintPath>/Users/Janine/GitHub/LeapBand/Assets/AssetStoreTools/Editor/AssetStoreToolsExtra.dll</HintPath>
+ </Reference>
+ <Reference Include="MySynthesizer">
+ <HintPath>/Users/Janine/GitHub/LeapBand/Assets/MySynthesizer/plugins/MySynthesizer.dll</HintPath>
  </Reference>
  <Reference Include="LeapCSharp.NET3.5">
- <HintPath>/Users/czhang/Development/VR-Instruments/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+ <HintPath>/Users/Janine/GitHub/LeapBand/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -156,13 +159,10 @@
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/macstandalonesupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="MySynthesizer">
- <HintPath>/Users/czhang/Development/VR-Instruments/Assets/MySynthesizer/plugins/MySynthesizer.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{BB48CC65-F467-C347-9D59-8F9F33F14782}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{3F5DAC6A-740F-530B-4723-C220444BB1C7}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
