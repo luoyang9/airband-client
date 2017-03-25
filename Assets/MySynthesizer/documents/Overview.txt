@@ -1,0 +1,169 @@
+﻿
+
+# Files
+  +MySynthesizer
+    +plugins
+      MySynthesizer.dll
+      MySynthesizerUWP.dll
+    +documents
+      ReadMe.txt
+      Overview.txt
+      Reference.txt
+      MyMMLManual.txt
+    +samples
+      Sample.unity
+       *and assets*
+    +scripts
+      MyFakeTask.cs
+      MyMMLBox.cs
+      MyMMLClip.cs
+      MyMMLPlayer.cs
+      MySyntheStation.cs
+    +tools
+      MyMMLChecker.exe
+      MyMMLChecker.txt
+      MyMMLChecker.zip
+      SMF2MyMML.exe
+      SMF2MyMML.txt
+      SMF2MyMML.zip
+      ct8tone.mml.txt
+      ct8drum.mml.txt
+
+
+# Tools
+  file:MySynthesizer/tools/MyMMLChecker.exe
+    This is commandline program on windows.
+    It can output to wav file.
+    Source codes are bundled.(MyMMLChecker.zip)
+
+  file:MySynthesizer/tools/SMF2MyMML.exe
+    This is commandline program on windows.
+    This program convert SMF to MyMML.
+    Source codes are bundled.(SMF2MyMML.zip)
+    Default tone data ct8tone.mml.txt & ct8drum.mml.txt (all tones are square wave :-)
+
+# Sample unity project
+  file:MySynthesizer/sample/Sample.unity
+    This is a sample scene for Unity.
+    Simple MMLPlayer & Tone editor.
+
+# Unity scripts
+  file:MySynthesizer/scripts/*.cs
+
+  // Synthesizer management class. setup tone, generate audioclip.
+  MySpace.MySyntheStation;
+
+  // MML sequencer holder class. bind SynthStation.
+  MySpace.MyMMLPlayer;
+
+  // Clip management class.
+  MySpace.MyMMLBox;
+
+  // MML clip class.
+  MySpace.MyMMLClip;
+
+  // for common use for with UWP.
+  MySpace.Tasks.Task;
+
+# Plugin classes
+  file:MySynthesizer/plugins/MySynthesizer.dll
+
+  // Mixer class. Mixing and buffering MySynthesizer's outputs.
+  MySpace.Synthesizer.MyMixer;
+
+  // Synthesizer base class
+  MySpace.Synthesizer.MySynthesizer;
+
+  // MML sequence data of parsing from text.
+  MySpace.Synthesizer.MMLSequencer.MyMMLSequence;
+
+  // MML sequencer
+  MySpace.Synthesizer.MMLSequencer.MyMMLSequencer;
+
+  // Phase Modulation(FM) Synthesizer.
+  MySpace.Synthesizer.PM8.MySynthesizerPM8;
+
+  // Simple Sampling Synthesizer.
+  MySpace.Synthesizer.SS8.MySynthesizerSS8;
+
+  // Wave Table Synthesizer.
+  MySpace.Synthesizer.CT8.MySynthesizerCT8;
+
+
+- Usage -
+
+  *Use scripts for Unity
+   1st: Add MySyhthesizer/MySyntheStation component to MainCamera GameObject (have audio listener)
+   2nd: Add MySynthesizer/MyMMLPLayer component to any GameObject.
+   3rd: If you use GenerateAudioClip option on MyMMLClip, Add AudioSource to GameObject with MyMMLPlayer.
+   4th: Write MML text and import.
+   5th: Drag imported mml and Drop to any location.
+   6th: YourMMLBox.Play("clip name") plays clip!
+
+  *If you directly use a plugin.
+   Add component like this class to the GameObject having AudioListner.
+    public class YourMusicClass : MonoBehaviour{
+        private MyMixer mix;
+        private MySynthesizer ss0;
+        private MyMMLSequencer seq;
+
+        void OnEnable(){
+            mix = new MyMixer(freq, false);         // <-- raise worker thread!
+            ss0 = new MySynthesizerPM8(mix);        // <-- connect synthesizer to mixer
+            seq = new MyMMLSequencer(mix.TickFrequency);
+            mix.TickCallback = () => seq.Tick();    // <-- connect sequencer to mixer
+        }
+        void OnDisable(){
+            ss0.Terminate();                        // <-- disconnect mixer
+            mix.Terminate();                        // <-- terminate thread
+            seq = null;
+            ss0 = null;
+            mix = null;
+        }
+        void Update(){
+            mix.Update();                         // <-- This promotes the processing in the other thread
+        }
+        void OnAudioFilterRead(float[] data, int channels){
+            var m = mix;
+            if(m != null){
+                m.Output(data, channels, data.Length / channels);
+            }
+        }
+
+        void PlayMusic(string mmlText)
+        {
+            // parse mml text
+            MyMMLSequence mml = new MyMMLSequence(mmlText);
+            if(mml.ErrorLine != 0){
+                throw new System.FormatException("mml parser error. " + mml.ErrorLine + ":" + mml.ErrorPosition + ":" + mml.ErrorString);
+            }
+            // setup tones
+            List<object> toneSet0 = new List<object>();
+            Dictionary<int, int> toneMap0 = new Dictionary<int, int>();
+            for (int i = 0; i < mml.ToneData.Count; i++)
+            {
+                object tone = ss0.CreateToneObject(mml.ToneData[i]);
+                toneMap0.Add(i, toneSet0.Count);
+                toneSet0.Add(tone);
+            }
+
+            seq.SetSynthesizer(0, ss0, toneSet0, toneMap0, 0xffffffffU);
+            seq.KeyShift = 0;
+            seq.VolumeScale = 1.0f;
+            seq.TempoScalse = 1.0f;
+            seq.AppDataEvent = () =>{
+                // If there is any processing...
+            }
+            seq.Play(mml, 0.0f, true);
+        }
+    }
+
+
+#Thread model
+  main     new mixer(),sequencer(),synthesizer()    mixer.update  ... seq.play   mixer.update ...
+  worker        +mixer.thread start                  +internal process            +internal process -> sequencer.tick ->synthesize.channel[].xxx
+
+  Unity (OnAudioFilterRead)    mixer.output  mixer.output  mixer.output ....
+
+#Volume
+  velocity * channel[].Volume * synthesizer.MasterVolume * mixer.MasterVolume
