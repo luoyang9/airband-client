@@ -194,11 +194,15 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRSceneSampleController.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRTrackerBounds.cs" />
+     <Compile Include="Assets\PlayCymbal.cs" />
+     <Compile Include="Assets\PlayCymbal2.cs" />
+     <Compile Include="Assets\PlayCymbalHit.cs" />
      <Compile Include="Assets\Scripts\Note.cs" />
      <Compile Include="Assets\Scripts\NoteDisplay.cs" />
      <Compile Include="Assets\Scripts\NoteObject.cs" />
      <Compile Include="Assets\Scripts\NoteSpawner.cs" />
      <Compile Include="Assets\Scripts\Track.cs" />
+     <Compile Include="Assets\SnareHit.cs" />
      <Compile Include="Assets\SocketIO\JSONObject\JSONObject.cs" />
      <Compile Include="Assets\SocketIO\JSONObject\JSONTemplates.cs" />
      <Compile Include="Assets\SocketIO\JSONObject\VectorTemplates.cs" />
@@ -280,6 +284,9 @@
      <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketState.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketStream.cs" />
      <Compile Include="Assets\StartFreestyle.cs" />
+     <Compile Include="Assets\Tom1Hit.cs" />
+     <Compile Include="Assets\Tom2Hit.cs" />
+     <Compile Include="Assets\Tom3Hit.cs" />
      <None Include="Assets\SocketIO\JSONObject\readme.txt" />
      <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />
