@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tom1Hit : MonoBehaviour {
 
-	public AudioSource audio;
+	public AudioSource centerAudio;
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +19,7 @@ public class Tom1Hit : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col) {
 		if (col.name == "bone3" && col.transform.parent.gameObject.name == "middle") {
-			audio.Play ();
+			centerAudio.Play ();
 		}
 	}
 }

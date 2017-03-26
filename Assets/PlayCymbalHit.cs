@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayCymbalHit : MonoBehaviour {
 
-	public AudioSource audio;
+	public AudioSource centerAudio;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +17,6 @@ public class PlayCymbalHit : MonoBehaviour {
 	}
 
 	public void OnTriggerCymbal() {
-		audio.Play ();
+		centerAudio.Play ();
 	}
 }

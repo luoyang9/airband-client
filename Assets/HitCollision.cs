@@ -5,8 +5,8 @@ using AssemblyCSharp;
 
 public class HitCollision : PhysicalInstrument  {
 
-	//public AudioSource audio;
-	//public AudioSource edgeAudio;
+	public AudioSource centerAudio;
+	public AudioSource edgeAudio;
 
 	private bool centerTriggered;
 	public bool challenge = false;
@@ -32,10 +32,10 @@ public class HitCollision : PhysicalInstrument  {
 	void OnTriggerEnter(Collider col) {
 		if(isHand(col)) {
 			if (centerTriggered) {
-				//audio.Play ();
+				centerAudio.Play ();
 				main.noteHit(CENTER_NOTE_ID, true);
-
 			} else {
+				edgeAudio.Play ();
 				main.noteHit (EDGE_NOTE_ID, true);
 			}
 		}

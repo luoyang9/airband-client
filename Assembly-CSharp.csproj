@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3F5DAC6A-740F-530B-4723-C220444BB1C7}</ProjectGuid>
+    <ProjectGuid>{BB48CC65-F467-C347-9D59-8F9F33F14782}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,8 +46,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
      <Compile Include="Assets\BongoSounder.cs" />
      <Compile Include="Assets\ChallengeChoice.cs" />
+=======
+>>>>>>> master
      <Compile Include="Assets\GoToGame.cs" />
      <Compile Include="Assets\HiCenterCollisionHit.cs" />
      <Compile Include="Assets\HiHitCollision.cs" />
@@ -153,6 +156,7 @@
      <Compile Include="Assets\LeapMotionVR\Widgets\Scripts\DataBinderExamples\SliderToTextDataBinder.cs" />
      <Compile Include="Assets\LeapMotionVR\Widgets\Scripts\DataBinderExamples\ToggleToTextDataBinder.cs" />
      <Compile Include="Assets\LeapMotionVR\Widgets\Scripts\WidgetsEnabler.cs" />
+     <Compile Include="Assets\LerpTransition.cs" />
      <Compile Include="Assets\LoCenterCollisionHit.cs" />
      <Compile Include="Assets\MySynthesizer\samples\scripts\GarbageCollector.cs" />
      <Compile Include="Assets\MySynthesizer\samples\scripts\GridButton.cs" />
@@ -297,7 +301,6 @@
      <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketFrame.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketState.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketStream.cs" />
-     <Compile Include="Assets\StartFreestyle.cs" />
      <Compile Include="Assets\Tom1Hit.cs" />
      <Compile Include="Assets\Tom2Hit.cs" />
      <Compile Include="Assets\Tom3Hit.cs" />
@@ -358,10 +361,10 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="MySynthesizer">
- <HintPath>/Users/Janine/GitHub/LeapBand/Assets/MySynthesizer/plugins/MySynthesizer.dll</HintPath>
+ <HintPath>/Users/czhang/Development/VR-Instruments/Assets/MySynthesizer/plugins/MySynthesizer.dll</HintPath>
  </Reference>
  <Reference Include="LeapCSharp.NET3.5">
- <HintPath>/Users/Janine/GitHub/LeapBand/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+ <HintPath>/Users/czhang/Development/VR-Instruments/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

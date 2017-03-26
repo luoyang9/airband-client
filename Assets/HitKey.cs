@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HitKey : MonoBehaviour {
 
-	public AudioSource audio;
+	public AudioSource centerAudio;
 
 	// Use this for initialization
 	void Start () {
@@ -12,7 +12,7 @@ public class HitKey : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col) {
 		if(col.name == "bone3"  && col.transform.parent.gameObject.name == "middle") {
-			audio.Play ();
+			centerAudio.Play ();
 		}
 	}
 	
