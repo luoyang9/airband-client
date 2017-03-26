@@ -84,8 +84,8 @@ public class Main : MonoBehaviour {
 		socket.Emit("rockon:join", data);
 		// Change ui
 	}
-	
-	private void onRockOnJoin(SocketIOEvent e){
+
+	public void onRockOnJoin(SocketIOEvent e){
 		players = new Dictionary<string, Player> ();
 		int count = e.data.GetField ("players").Count;
 		for (int x = 0; x < count; x++) {

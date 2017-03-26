@@ -57,7 +57,7 @@ public class GoToGame : MonoBehaviour {
 			//challenge stuff
 		} else {
 			Main main = GameObject.Find ("Main").GetComponent<Main> ();
-			main.onRockOnJoin (instrument.name.ToLower ());
+			main.joinRockOn (instrument.name.ToLower ());
 		}
 	}
 
