@@ -33,7 +33,7 @@ public class HitCollision : PhysicalInstrument  {
 		if(isHand(col)) {
 			if (centerTriggered) {
 				centerAudio.Play ();
-				main.noteHit(CENTER_NOTE_ID, true);
+				main.noteHit(CENTER_NOTE_ID , true);
 			} else {
 				edgeAudio.Play ();
 				main.noteHit (EDGE_NOTE_ID, true);

@@ -66,10 +66,10 @@ public class Main : MonoBehaviour {
 		e.data.GetField (ref is_pressed, "is_pressed");
 
 
-		//playNote (players [playerID].instrument, note_id, is_pressed);
+		playNote (players [playerID].instrument, note_id, is_pressed);
 		Debug.Log ("back");
 
-		instruments ["bongo"].playNote (note_id, is_pressed);
+		//instruments ["bongo"].playNote (note_id, is_pressed);
 
 	}
 	/*
@@ -92,6 +92,7 @@ public class Main : MonoBehaviour {
 			Player curr = JsonUtility.FromJson<Player>(e.data.GetField ("players").GetField (x.ToString()).ToString());
 			players.Add (curr.player_id, curr);
 		}
+
 		// refresh display
 	}
 
@@ -189,7 +190,7 @@ public class Main : MonoBehaviour {
 			socket.Emit ("challenge:note", data);
 		else
 			socket.Emit ("rockon:note", data);
-		Debug.Log ("Note hit");
+		//Debug.Log ("Note hit");
 	}
 
 	public void saveTrack(Track track){
