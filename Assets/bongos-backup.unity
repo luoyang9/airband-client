@@ -100,6 +100,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 179108723}
+  - component: {fileID: 179108724}
   m_Layer: 0
   m_Name: MenuPanel
   m_TagString: Untagged
@@ -116,7 +117,7 @@ Transform:
   m_GameObject: {fileID: 179108722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.6591504, y: 2.9019015, z: 8.72}
-  m_LocalScale: {x: 0.12, y: 0.1, z: 0.05}
+  m_LocalScale: {x: 0.12, y: 0.12, z: 0.05}
   m_Children:
   - {fileID: 1247773236}
   - {fileID: 660399019}
@@ -127,6 +128,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &179108724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179108722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431d9c7de7f3f4a4bbc216a4c3424597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &183180041
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,6 +173,7 @@ MonoBehaviour:
   gameCamera: {fileID: 584659739}
   hand: {fileID: 809231453}
   track: pinacolada
+  bongoTrack: {fileID: 1354389704}
 --- !u!23 &183180043
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -311,7 +324,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 010d39cbd03ee4c99a746c1f8ecdc0d8, type: 2}
       propertyPath: url
-      value: ws://192.168.1.216:80/socket.io/?EIO=4&transport=websocket
+      value: ws://192.168.1.191:80/socket.io/?EIO=4&transport=websocket
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 010d39cbd03ee4c99a746c1f8ecdc0d8, type: 2}
       propertyPath: autoConnect
@@ -2684,6 +2697,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa80b5eb2a1784cf4bc5296b48f21bd5, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1354389704 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1963920371040834, guid: 279608eef2599fe418580eaff6bd9ae1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1950427161}
 --- !u!1 &1470509161
 GameObject:
   m_ObjectHideFlags: 0
@@ -3052,6 +3070,7 @@ MonoBehaviour:
   gameCamera: {fileID: 584659739}
   hand: {fileID: 809231453}
   track: odetojoy
+  bongoTrack: {fileID: 1354389704}
 --- !u!1 &1818490015 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1990867126661202, guid: 7aaae720217e944d5b6f63bb7cac3c67,
@@ -3161,15 +3180,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4488259135929736, guid: 279608eef2599fe418580eaff6bd9ae1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.51
+      value: -1.87
       objectReference: {fileID: 0}
     - target: {fileID: 4488259135929736, guid: 279608eef2599fe418580eaff6bd9ae1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.86
+      value: -7.54
       objectReference: {fileID: 0}
     - target: {fileID: 4488259135929736, guid: 279608eef2599fe418580eaff6bd9ae1, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 5.55
+      value: 6.36
       objectReference: {fileID: 0}
     - target: {fileID: 4488259135929736, guid: 279608eef2599fe418580eaff6bd9ae1, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3195,6 +3214,10 @@ Prefab:
         type: 2}
       propertyPath: journeyTime
       value: 4000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963920371040834, guid: 279608eef2599fe418580eaff6bd9ae1, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 279608eef2599fe418580eaff6bd9ae1, type: 2}
@@ -3224,13 +3247,13 @@ Transform:
   m_GameObject: {fileID: 1955381100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.84, y: 2.9019015, z: 8.72}
-  m_LocalScale: {x: 0.12, y: 0.1, z: 0.05}
+  m_LocalScale: {x: 0.12, y: 0.12, z: 0.05}
   m_Children:
   - {fileID: 1969917536}
   - {fileID: 183180046}
   - {fileID: 1800399466}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1969917535
 GameObject:

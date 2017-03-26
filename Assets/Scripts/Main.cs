@@ -9,7 +9,7 @@ public class Main : MonoBehaviour {
 	SocketIOComponent socket;
 	Dictionary<string, Instrument> instruments;
 
-	ArrayList tracks;
+	public ArrayList tracks;
 	Dictionary<string, Player> players;
 	Dictionary<string, ChallengePlayer> chalPlayers;
 	bool client_ready;
@@ -70,6 +70,8 @@ public class Main : MonoBehaviour {
 			Track realTrack = new Track (id, instrument, name, artist, thumbnail_file, audio_file, duration, arrnotes);
 			tracks.Add (realTrack);
 		}
+		Debug.Log ("Tracks ready");
+		Debug.Log (tracks.Count);
 	}
 
 	private void onRockOnNote(SocketIOEvent e){
