@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BongoSounder.cs" />
      <Compile Include="Assets\ChallengeChoice.cs" />
      <Compile Include="Assets\GoToGame.cs" />
      <Compile Include="Assets\HiCenterCollisionHit.cs" />
@@ -300,6 +301,7 @@
      <Compile Include="Assets\Tom1Hit.cs" />
      <Compile Include="Assets\Tom2Hit.cs" />
      <Compile Include="Assets\Tom3Hit.cs" />
+     <Compile Include="Assets\testscript.cs" />
      <None Include="Assets\SocketIO\JSONObject\readme.txt" />
      <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />

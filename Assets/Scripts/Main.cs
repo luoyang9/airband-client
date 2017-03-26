@@ -61,7 +61,8 @@ public class Main : MonoBehaviour {
 		e.data.GetField (ref is_pressed, "is_pressed");
 
 
-		playNote (players [playerID].instrument, note_id, is_pressed);
+		//playNote (players [playerID].instrument, note_id, is_pressed);
+		Debug.Log ("back");
 
 	}
 
