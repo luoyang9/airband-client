@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{BB48CC65-F467-C347-9D59-8F9F33F14782}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_2;UNITY_5_5;UNITY_5;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VIDEO;ENABLE_VR;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\GoToGame.cs" />
+     <Compile Include="Assets\HiCenterCollisionHit.cs" />
+     <Compile Include="Assets\HiHitCollision.cs" />
+     <Compile Include="Assets\HitCollision.cs" />
+     <Compile Include="Assets\HitKey.cs" />
+     <Compile Include="Assets\Instruments\Script\Bongo.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\AerodynamicLeaf.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\BugReporter.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\ChangeMaterialOnGrab.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\CubeWave.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\EnableOnStart.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\FloatingStem.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\FlowerBloom.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\FlowerGrower.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\HandCycler.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\HandDetector.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\IgnoreInternalCollisions.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\ParticlesOnCollision.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\PetalMesh.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\PressAnyKeyToReset.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\RecordingControls.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\ResetCollisionsOnBreak.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\StemMesh.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\VoxelSheet.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\HandController.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\DebugFinger.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\DebugHand.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\FingerModel.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\HandFader.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\HandModel.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\PolyFinger.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\PolyHand.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\RiggedFinger.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\RiggedHand.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\RigidFinger.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\RigidHand.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\SkeletalFinger.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\SkeletalHand.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\LeapDeviceInfo.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\LeapImageRetriever.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Tools\ToolModel.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\ConfidenceTransparency.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\DisconnectionNotice.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\EnableDepthBuffer.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\EnableUpdateOrdering.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\ExecutionOrder.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\FitHeightToScreen.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\GrabbableObject.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\GrabbingHand.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\KeyEnableBehaviors.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\KeyEnableGameObjects.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\LeapRecorder.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\LeapUnityExtensions.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\MagneticPinch.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\StretchToScreen.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\TriggerDrawing.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\Utils.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Button\ButtonBase.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Button\ButtonToggleBase.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\DemoScripts\ButtonDemoGraphics.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\DemoScripts\ButtonDemoToggle.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\DemoScripts\SliderDemo.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\DemoScripts\SliderDemoGraphics.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Dial\DatePickerHideVolume.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Dial\DialGraphics.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Dial\DialModeBase.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Dial\FadeTextByRotation.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Dial\HilightTextVolume.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Events\EventArg.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Interfaces\AnalogInteractionHandler.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Interfaces\BinaryInteractionHandler.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Interfaces\DataBinder.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Interfaces\IDataBoundWidget.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Physics\LeapPhysicsBase.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Physics\LeapPhysicsSpring.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Scroll\ScrollBase.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Slider\SliderBase.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\SliderActivationManager.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Utils\AdoptParent.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Utils\FrameRateControls.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Utils\PreserveChildren.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Utils\SmoothedFloat.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Utils\SmoothedQuaternion.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Utils\SmoothedVector3.cs" />
+     <Compile Include="Assets\LeapMotionVR\CamRecorder\Scripts\CamRecorder.cs" />
+     <Compile Include="Assets\LeapMotionVR\CamRecorder\Scripts\CamRecorderInterface.cs" />
+     <Compile Include="Assets\LeapMotionVR\DemoResources\Scripts\BlocksPlaneGenerator.cs" />
+     <Compile Include="Assets\LeapMotionVR\DemoResources\Scripts\MovementManager.cs" />
+     <Compile Include="Assets\LeapMotionVR\DemoResources\Scripts\RandomBlocksGenerator.cs" />
+     <Compile Include="Assets\LeapMotionVR\Scripts\CompensatedRescale.cs" />
+     <Compile Include="Assets\LeapMotionVR\Scripts\ConfigurationManager\HMRConfigurationManager.cs" />
+     <Compile Include="Assets\LeapMotionVR\Scripts\ConfigurationManager\LMHeadMountedRigConfiguration.cs" />
+     <Compile Include="Assets\LeapMotionVR\Scripts\EyeType.cs" />
+     <Compile Include="Assets\LeapMotionVR\Scripts\LeapVRCameraControl.cs" />
+     <Compile Include="Assets\LeapMotionVR\Scripts\LeapVRTemporalWarping.cs" />
+     <Compile Include="Assets\LeapMotionVR\Scripts\TemporalWarpingStatus.cs" />
+     <Compile Include="Assets\LeapMotionVR\Scripts\TouchCubeHelpMenu.cs" />
+     <Compile Include="Assets\LeapMotionVR\Scripts\TouchCubeQueues.cs" />
+     <Compile Include="Assets\LeapMotionVR\SystemWipe\QuickSwitcher.cs" />
+     <Compile Include="Assets\LeapMotionVR\SystemWipe\SystemWipeRecognizerListener.cs" />
+     <Compile Include="Assets\LeapMotionVR\SystemWipe\SystemWipeRecognizerNative.cs" />
+     <Compile Include="Assets\LeapMotionVR\Widgets\Scripts\DataBinderExamples\DialToTextBinder.cs" />
+     <Compile Include="Assets\LeapMotionVR\Widgets\Scripts\DataBinderExamples\SliderToTextDataBinder.cs" />
+     <Compile Include="Assets\LeapMotionVR\Widgets\Scripts\DataBinderExamples\ToggleToTextDataBinder.cs" />
+     <Compile Include="Assets\LeapMotionVR\Widgets\Scripts\WidgetsEnabler.cs" />
+     <Compile Include="Assets\LerpTransition.cs" />
+     <Compile Include="Assets\LoCenterCollisionHit.cs" />
+     <Compile Include="Assets\MySynthesizer\samples\scripts\GarbageCollector.cs" />
+     <Compile Include="Assets\MySynthesizer\samples\scripts\GridButton.cs" />
+     <Compile Include="Assets\MySynthesizer\samples\scripts\KeyProperty.cs" />
+     <Compile Include="Assets\MySynthesizer\samples\scripts\Keyboard.cs" />
+     <Compile Include="Assets\MySynthesizer\samples\scripts\MMLPlayer.cs" />
+     <Compile Include="Assets\MySynthesizer\samples\scripts\PresetButton.cs" />
+     <Compile Include="Assets\MySynthesizer\samples\scripts\SampleTools.cs" />
+     <Compile Include="Assets\MySynthesizer\samples\scripts\ToneEditor.cs" />
+     <Compile Include="Assets\MySynthesizer\samples\scripts\ToneEditorCT8.cs" />
+     <Compile Include="Assets\MySynthesizer\samples\scripts\Transition.cs" />
+     <Compile Include="Assets\MySynthesizer\samples\scripts\WaveTable.cs" />
+     <Compile Include="Assets\MySynthesizer\scripts\MyFakeTask.cs" />
+     <Compile Include="Assets\MySynthesizer\scripts\MyMMLBox.cs" />
+     <Compile Include="Assets\MySynthesizer\scripts\MyMMLClip.cs" />
+     <Compile Include="Assets\MySynthesizer\scripts\MyMMLPlayer.cs" />
+     <Compile Include="Assets\MySynthesizer\scripts\MySyntheStation.cs" />
+     <Compile Include="Assets\OVR\Moonlight\Scripts\OVRDebugHeadController.cs" />
+     <Compile Include="Assets\OVR\Moonlight\Scripts\OVROverlay.cs" />
+     <Compile Include="Assets\OVR\Moonlight\Scripts\OVRPlatformMenu.cs" />
+     <Compile Include="Assets\OVR\Moonlight\Scripts\OVRTouchpad.cs" />
+     <Compile Include="Assets\OVR\Moonlight\Scripts\OVRVolumeControl.cs" />
+     <Compile Include="Assets\OVR\Moonlight\Scripts\Utils\OVRChromaticAberration.cs" />
+     <Compile Include="Assets\OVR\Moonlight\Scripts\Utils\OVRDebugGraph.cs" />
+     <Compile Include="Assets\OVR\Moonlight\Scripts\Utils\OVRDebugUtils.cs" />
+     <Compile Include="Assets\OVR\Moonlight\Scripts\Utils\OVRInputControl.cs" />
+     <Compile Include="Assets\OVR\Moonlight\Scripts\Utils\OVRModeParms.cs" />
+     <Compile Include="Assets\OVR\Moonlight\Scripts\Utils\OVRMonoscopic.cs" />
+     <Compile Include="Assets\OVR\Moonlight\Scripts\Utils\OVRResetOrientation.cs" />
+     <Compile Include="Assets\OVR\Moonlight\Scripts\Utils\OVRWaitCursor.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRCameraRig.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRCommon.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRDisplay.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRManager.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVROnCompleteListener.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRPlugin.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRProfile.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRTracker.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRDebugInfo.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRGamepadController.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRGridCube.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRPlayerController.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRSceneSampleController.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRTrackerBounds.cs" />
+     <Compile Include="Assets\PhysicalButton.cs" />
+     <Compile Include="Assets\PickInstrument.cs" />
+     <Compile Include="Assets\PickInstrumentClick.cs" />
+     <Compile Include="Assets\PickTrack.cs" />
+     <Compile Include="Assets\PlayCymbal.cs" />
+     <Compile Include="Assets\PlayCymbal2.cs" />
+     <Compile Include="Assets\PlayCymbalHit.cs" />
+     <Compile Include="Assets\ResetGame.cs" />
+     <Compile Include="Assets\Score.cs" />
+     <Compile Include="Assets\Scripts\ChallengePlayers.cs" />
+     <Compile Include="Assets\Scripts\GetLeapFingers.cs" />
+     <Compile Include="Assets\Scripts\Instrument.cs" />
+     <Compile Include="Assets\Scripts\Main.cs" />
+     <Compile Include="Assets\Scripts\Note.cs" />
+     <Compile Include="Assets\Scripts\NoteDisplay.cs" />
+     <Compile Include="Assets\Scripts\NoteObject.cs" />
+     <Compile Include="Assets\Scripts\NoteSpawner.cs" />
+     <Compile Include="Assets\Scripts\PhysicalButton.cs" />
+     <Compile Include="Assets\Scripts\PhysicalInstrument.cs" />
+     <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Track.cs" />
+     <Compile Include="Assets\SnareHit.cs" />
+     <Compile Include="Assets\SocketIO\JSONObject\JSONObject.cs" />
+     <Compile Include="Assets\SocketIO\JSONObject\JSONTemplates.cs" />
+     <Compile Include="Assets\SocketIO\JSONObject\VectorTemplates.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\Ack.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\Decoder.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\Encoder.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\EnginePacketType.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\Packet.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\Parser.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\SocketIOComponent.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\SocketIOEvent.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\SocketIOException.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\SocketPacketType.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\Test\TestSocketIO.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\AssemblyInfo.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\ByteOrder.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\CloseEventArgs.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\CloseStatusCode.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\CompressionMethod.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\ErrorEventArgs.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Ext.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Fin.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\HandshakeBase.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\HandshakeRequest.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\HandshakeResponse.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\LogData.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\LogLevel.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Logger.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Mask.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\MessageEventArgs.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\AuthenticationBase.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\AuthenticationChallenge.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\AuthenticationResponse.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\AuthenticationSchemes.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\Chunk.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\ChunkStream.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\ChunkedRequestStream.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\Cookie.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\CookieCollection.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\CookieException.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\EndPointListener.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\EndPointManager.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpBasicIdentity.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpConnection.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpDigestIdentity.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpHeaderInfo.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpHeaderType.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpListener.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpListenerContext.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpListenerException.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpListenerPrefixCollection.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpListenerRequest.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpListenerResponse.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpStatusCode.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpStreamAsyncResult.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpUtility.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpVersion.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\InputChunkState.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\InputState.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\LineState.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\ListenerAsyncResult.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\ListenerPrefix.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\NetworkCredential.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\QueryStringCollection.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\ReadBufferState.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\RequestStream.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\ResponseStream.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\Security\SslStream.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\WebHeaderCollection.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\WebSockets\HttpListenerWebSocketContext.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\WebSockets\TcpListenerWebSocketContext.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Net\WebSockets\WebSocketContext.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Opcode.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\PayloadData.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\Rsv.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocket.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketException.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketFrame.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketState.cs" />
+     <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketStream.cs" />
+     <Compile Include="Assets\Sounders\BongoSounder.cs" />
+     <Compile Include="Assets\Sounders\DrumSounder.cs" />
+     <Compile Include="Assets\Sounders\PianoSounder.cs" />
+     <Compile Include="Assets\Tom1Hit.cs" />
+     <Compile Include="Assets\Tom2Hit.cs" />
+     <Compile Include="Assets\Tom3Hit.cs" />
+     <Compile Include="Assets\testscript.cs" />
+     <None Include="Assets\SocketIO\JSONObject\readme.txt" />
+     <None Include="Assets\Plugins\donotdelete.txt" />
+     <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />
+     <None Include="Assets\LeapMotion\Resources\LeapCG.cginc" />
+     <None Include="Assets\Plugins\Android\assets\donotdelete.txt" />
+     <None Include="Assets\LeapMotion\README_BEFORE_UPDATING.txt" />
+     <None Include="Assets\MySynthesizer\tools\SMF2MyMML.txt" />
+     <None Include="Assets\MySynthesizer\tools\MyMMLChecker.txt" />
+     <None Include="Assets\Plugins\x86_64\donotdelete.txt" />
+     <None Include="Assets\MySynthesizer\samples\mml\Flohwalzer.mml.txt" />
+     <None Include="Assets\MySynthesizer\documents\Reference.txt" />
+     <None Include="Assets\LeapMotion\DemoResources\ScrollerText.txt" />
+     <None Include="Assets\LeapMotion\readme.txt" />
+     <None Include="Assets\OVR\Moonlight\Shaders\OVRColorRampAlpha.shader" />
+     <None Include="Assets\LeapMotion\Resources\ImageHandHighlight.shader" />
+     <None Include="Assets\LeapMotion\Shaders\RimShading.shader" />
+     <None Include="Assets\LeapMotion\Dependencies.txt" />
+     <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\OVR\Moonlight\Shaders\Unlit Crosshair.shader" />
+     <None Include="Assets\LeapMotion\Resources\ThresholdOverlay.shader" />
+     <None Include="Assets\OVR\Moonlight\Resources\Unlit Transparent Color.shader" />
+     <None Include="Assets\MySynthesizer\tools\ct8tone.mml.txt" />
+     <None Include="Assets\MySynthesizer\samples\mml\Hanazakari.mml.txt" />
+     <None Include="Assets\LeapMotion\Resources\PassthroughForeground.shader" />
+     <None Include="Assets\SocketIO\Readme.txt" />
+     <None Include="Assets\MySynthesizer\tools\ct8drum.mml.txt" />
+     <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-LightedOutline.shader" />
+     <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Lighted.shader" />
+     <None Include="Assets\LeapMotion\Resources\PassthroughBackground.shader" />
+     <None Include="Assets\MySynthesizer\documents\MyMMLManual.txt" />
+     <None Include="Assets\LeapMotion\Widgets\Shaders\SelfIllumAlpha.shader" />
+     <None Include="Assets\MySynthesizer\documents\ReadMe.txt" />
+     <None Include="Assets\MySynthesizer\samples\mml\Sakura.mml.txt" />
+     <None Include="Assets\MySynthesizer\documents\Overview.txt" />
+     <None Include="Assets\LeapMotion\Version.txt" />
+     <None Include="Assets\Plugins\x86\donotdelete.txt" />
+     <None Include="Assets\MySynthesizer\samples\mml\test01.mml.txt" />
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PlaymodeTestsRunner">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="MySynthesizer">
+ <HintPath>/Users/czhang/Development/VR-Instruments/Assets/MySynthesizer/plugins/MySynthesizer.dll</HintPath>
+ </Reference>
+ <Reference Include="LeapCSharp.NET3.5">
+ <HintPath>/Users/czhang/Development/VR-Instruments/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
