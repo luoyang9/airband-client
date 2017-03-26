@@ -34,15 +34,16 @@ public class GoToGame : MonoBehaviour {
 
 		GameObject newInstrument = Instantiate (instrument);
 
-		if (newInstrument.gameObject.name == "Drums") {
+		if (newInstrument.gameObject.name == "Drums(Clone)") {
 			handMovementScale = new Vector3 (4, 4, 4);
 			handPosition = new Vector3 (0, -0.2f, -1.926f); 
 			newInstrument.transform.position = new Vector3 (0, -0.8137832f, -1.23f);
-		} else if(newInstrument.gameObject.name == "Piano"){
+		} else if(newInstrument.gameObject.name == "Piano(Clone)"){
 			handMovementScale = new Vector3 (1.3f, 1.3f, 1.3f);
 			handPosition = new Vector3 (0, 0.2f, -1.926f);
 			newInstrument.transform.position = new Vector3 (0, 0, -1.9f);
 		} else {
+			Debug.Log (newInstrument.gameObject.name);
 			handMovementScale = new Vector3 (1, 1, 1);
 			handPosition = new Vector3 (0, 0.4f, -1.926f);
 			newInstrument.transform.position = new Vector3 (-2.188605f, -3.370371f, -0.1664743f);
