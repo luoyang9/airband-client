@@ -28,21 +28,27 @@ public class NoteDisplay : MonoBehaviour {
 		note_spawners = new NoteSpawner[note_spawns.Length];
 
 		for (int x = 0; x < note_spawns.Length; x++) {
-			note_spawners [x] = (NoteSpawner)note_spawns [x].GetComponent (typeof(NoteSpawner));
+			note_spawners [x] = note_spawns [x].GetComponent<NoteSpawner>();
 			note_spawners [x].setJourneyTime (this.journeyTime);
 			note_spawners [x].setNoteObject (this.note_object);
 		}
-
-		Note note1 = new Note (0, 5000, true);
-		Note note2 = new Note (0, 7000, true);
-		Note note3 = new Note (0, 8000, true);
-		Note note4 = new Note (0, 10000, true);
-
 		ArrayList notelist = new ArrayList ();
-		notelist.Add (note1);
-		notelist.Add (note2);
-		notelist.Add (note3);
-		notelist.Add (note4);
+		notelist.Add(new Note (0, 5000, true));
+		notelist.Add( new Note (0, 7000, true));
+		notelist.Add( new Note (0, 8000, true));
+		notelist.Add( new Note (0, 10000, true));
+		notelist.Add(new Note (1, 5000, true));
+		notelist.Add(new Note (1, 7000, true));
+		notelist.Add( new Note (1, 8000, true));
+		notelist.Add(new Note (1, 10000, true));
+		notelist.Add(new Note (2, 5000, true));
+		notelist.Add(new Note (2, 7000, true));
+		notelist.Add( new Note (2, 8000, true));
+		notelist.Add(new Note (2, 10000, true));
+		notelist.Add( new Note (3, 5000, true));
+		notelist.Add(new Note (3, 7000, true));
+		notelist.Add(new Note (3, 8000, true));
+		notelist.Add( new Note (3, 10000, true));
 
 		Track testTrack = new Track ("abc", "Guitar", "hello", "whatever.jpg", "abc.mp3", 1000,
 			                  notelist);
@@ -79,7 +85,7 @@ public class NoteDisplay : MonoBehaviour {
 	void trackStart(){
 		Debug.Assert (this.track != null);
 
-		startTime = Time.realtimeSinceStartup;
+		startTime = Time.realtimeSinceStartup * 1000;
 		noteIdx = 0;
 		playing = true;
 	}
