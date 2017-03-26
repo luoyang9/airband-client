@@ -1,8 +1,10 @@
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
+Library
+Temp
+Obj
+obj
+Build
+Builds
+Temp
 /Assets/AssetStoreTools*
 
 .DS_Store

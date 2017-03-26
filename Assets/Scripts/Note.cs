@@ -15,6 +15,10 @@ namespace AssemblyCSharp
 			this.offset = offset;
 			this.is_pressed = is_pressed;
 		}
+
+		public string ToString() {
+			return "[Note: id="+id+",offset="+offset+",is_pressed="+is_pressed+"]";
+		}
 	}
 }
 

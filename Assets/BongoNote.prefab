@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 54572436581149648}
   - component: {fileID: 114017882604723684}
   m_Layer: 0
-  m_Name: DrumNote
+  m_Name: BongoNote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
