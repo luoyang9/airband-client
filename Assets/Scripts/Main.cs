@@ -39,7 +39,7 @@ public class Main : MonoBehaviour {
 		socket.On ("rockon:join", onRockOnJoin);
 		socket.On ("rockon:player_join", onRockOnPlayerJoin);
 		socket.On ("rockon:note", onRockOnNote);
-		socket.On ("rockon:track", onRockOnStart);
+		//socket.On ("rockon:track", onRockOnStart);
 		socket.On ("challenge:join", onJoinChallenge);
 		socket.On ("challenge:player_join", onChallengePlayerJoin);
 		socket.On ("challenge:ready", onChallengeReady);
@@ -84,8 +84,8 @@ public class Main : MonoBehaviour {
 		socket.Emit("rockon:join", data);
 		// Change ui
 	}
-	
-	private void onRockOnJoin(SocketIOEvent e){
+
+	public void onRockOnJoin(SocketIOEvent e){
 		players = new Dictionary<string, Player> ();
 		int count = e.data.GetField ("players").Count;
 		for (int x = 0; x < count; x++) {
