@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ChallengeChoice.cs" />
+     <Compile Include="Assets\GoToGame.cs" />
      <Compile Include="Assets\HiCenterCollisionHit.cs" />
      <Compile Include="Assets\HiHitCollision.cs" />
      <Compile Include="Assets\HitCollision.cs" />
@@ -196,6 +197,7 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRTrackerBounds.cs" />
      <Compile Include="Assets\PickInstrument.cs" />
+     <Compile Include="Assets\PickInstrumentClick.cs" />
      <Compile Include="Assets\PlayCymbal.cs" />
      <Compile Include="Assets\PlayCymbal2.cs" />
      <Compile Include="Assets\PlayCymbalHit.cs" />
