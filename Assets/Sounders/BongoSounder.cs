@@ -15,12 +15,12 @@ public class BongoSounder : Instrument{
 		AudioSource[] highDrum = GameObject.Find ("Hi Drum").GetComponents<AudioSource>();
 		Debug.Log (highDrum.Length);
 		sounds = new AudioSource[4];
-		sounds [0] = highDrum [0];
-		sounds [1] = highDrum [1];
+		sounds [2] = highDrum [0];
+		sounds [3] = highDrum [1];
 
 		AudioSource[] lowDrum = GameObject.Find ("Lo Drum").GetComponents<AudioSource> ();
-		sounds [2] = lowDrum [0];
-		sounds [3] = lowDrum [1];
+		sounds [0] = lowDrum [0];
+		sounds [1] = lowDrum [1];
 	}
 		
 
