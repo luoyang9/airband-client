@@ -50,8 +50,10 @@ public class Main : MonoBehaviour {
 
 	private void onInit(SocketIOEvent e){
 		tracks = JsonUtility.FromJson<Track[]> (e.data.ToString());
-		// Display tracks in carosuel
 
+
+
+		Debug.Log (e.data);
 	}
 
 	private void onRockOnNote(SocketIOEvent e){
@@ -134,7 +136,11 @@ public class Main : MonoBehaviour {
 
 	private void onJoinChallenge(SocketIOEvent e){
 		Debug.Log ("onJoinChallenge");
-		clientID = e.data.GetField ("you").ToString ();
+		e.data.GetField (ref clientID, "you");
+		Debug.Log ("set clientID to: " + clientID);
+
+		Debug.Log (e.data);
+
 		ChallengePlayer[] joinedPlayers = JsonUtility.FromJson<ChallengePlayer[]>(e.data.GetField("players").ToString());
 
 		chalPlayers = new Dictionary<string, ChallengePlayer> ();
@@ -215,7 +221,6 @@ public class Main : MonoBehaviour {
 			socket.Emit ("challenge:note", data);
 		else
 			socket.Emit ("rockon:note", data);
-		//Debug.Log ("Note hit");
 	}
 
 	public void saveTrack(Track track){
@@ -224,8 +229,6 @@ public class Main : MonoBehaviour {
 		socket.Emit("rockon:track", data);
 	}
 		
-
-
 	private void playNote(string instrument, int note_id, bool is_pressed){
 		Debug.Log ("playNote");
 		instruments [instrument].playNote (note_id, is_pressed);
