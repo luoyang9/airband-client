@@ -4,13 +4,17 @@ namespace AssemblyCSharp
 {
 	public class Player
 	{
-		public string player_id;
+		public string id;
 		public string instrument;
 
-		public Player (string player_id, String instrument)
+		public Player (string id, String instrument)
 		{
-			this.player_id = player_id;
+			this.id = id;
 			this.instrument = instrument;
+		}
+
+		public string ToString(){
+			return "id: " + id + " instrument: " + instrument;
 		}
 
 	}

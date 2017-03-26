@@ -31,9 +31,9 @@ public class Main : MonoBehaviour {
 
 
 		instruments = new Dictionary<string, Instrument> ();
-		instruments.Add("bongo", new BongoSounder());
+		instruments.Add("bongos", new BongoSounder());
 		instruments.Add ("piano", new PianoSounder ());
-		instruments.Add ("drum", new DrumSounder ());
+		instruments.Add ("drums", new DrumSounder ());
 
 		socket.On ("init", onInit);
 		socket.On ("rockon:join", onRockOnJoin);
@@ -55,6 +55,7 @@ public class Main : MonoBehaviour {
 	}
 
 	private void onRockOnNote(SocketIOEvent e){
+		Debug.Log ("onRockOnNote");
 		string playerID = "";
 		if (playerID == clientID) {
 			return;
@@ -65,9 +66,9 @@ public class Main : MonoBehaviour {
 		bool is_pressed = true;
 		e.data.GetField (ref is_pressed, "is_pressed");
 
-
+		Debug.Log (players [playerID].instrument);
 		playNote (players [playerID].instrument, note_id, is_pressed);
-		Debug.Log ("back");
+
 
 		//instruments ["bongo"].playNote (note_id, is_pressed);
 
@@ -79,6 +80,7 @@ public class Main : MonoBehaviour {
 	}*/
 
 	public void joinRockOn(string instrument){
+		Debug.Log ("JoinRockOn");
 		JSONObject data = new JSONObject ();
 		data.AddField ("instrument", instrument);
 		socket.Emit("rockon:join", data);
@@ -86,21 +88,33 @@ public class Main : MonoBehaviour {
 	}
 
 	public void onRockOnJoin(SocketIOEvent e){
+		Debug.Log ("onRockOnJoin");
+		clientID = e.data.GetField ("you").ToString ();
+		Debug.Log ("Set id as " + clientID);
 		players = new Dictionary<string, Player> ();
+
 		int count = e.data.GetField ("players").Count;
+		Debug.Log (count);
+		Debug.Log (e.data);
+
 		for (int x = 0; x < count; x++) {
-			Player curr = JsonUtility.FromJson<Player>(e.data.GetField ("players").GetField (x.ToString()).ToString());
-			players.Add (curr.player_id, curr);
+			Player curr = JsonUtility.FromJson<Player>(e.data.GetField ("players")[x].ToString());
+			Debug.Log (curr.ToString ());
+			players.Add (curr.id, curr);
 		}
 
 		// refresh display
 	}
 
 	public void onRockOnPlayerJoin(SocketIOEvent e){
+		Debug.Log ("on rock on player join");
 		Debug.Assert (players != null);
 		Player curr = JsonUtility.FromJson<Player> (e.data.GetField ("player").ToString ());
+		//Debug.Log (e.data.GetField("player").ToString());
+		Debug.Assert (curr != null);
+		players.Add (curr.id, curr);
+		Debug.Log (curr.ToString());
 
-		players.Add (curr.player_id, curr);
 
 		//refresh display
 	}
@@ -114,6 +128,7 @@ public class Main : MonoBehaviour {
 	}
 
 	private void onJoinChallenge(SocketIOEvent e){
+		Debug.Log ("onJoinChallenge");
 		clientID = e.data.GetField ("you").ToString ();
 		ChallengePlayer[] joinedPlayers = JsonUtility.FromJson<ChallengePlayer[]>(e.data.GetField("players").ToString());
 
@@ -124,12 +139,14 @@ public class Main : MonoBehaviour {
 		// update;
 	}
 	private void onChallengePlayerJoin(SocketIOEvent e){
+		Debug.Log ("onChallengePlayerJoin");
 		ChallengePlayer newPlayer = JsonUtility.FromJson<ChallengePlayer> (e.data.GetField ("player").ToString ());
 		chalPlayers.Add (newPlayer.id, newPlayer);
 		// refresh display;
 	}
 
 	public void challengeReady(bool ready, int track_id){
+		Debug.Log ("ChallengeReady");
 		client_ready = ready;
 		JSONObject data = new JSONObject ();
 		data.AddField ("is_ready", ready);
@@ -139,6 +156,7 @@ public class Main : MonoBehaviour {
 	}
 
 	private void onChallengeReady(SocketIOEvent e){
+		Debug.Log ("onChallengeReady");
 		string playerID = "";
 		bool is_ready = false;
 		int track_id = 0;
@@ -153,6 +171,7 @@ public class Main : MonoBehaviour {
 	}
 
 	private void onChallengeNote(SocketIOEvent e){
+		Debug.Log ("onChallengeNote");
 		string player_id = "";
 		int score = 0;
 		int note_id = 0;
@@ -182,6 +201,7 @@ public class Main : MonoBehaviour {
 	}*/
 
 	public void noteHit(int note_id, bool is_pressed){
+		Debug.Log ("Note Hit");
 		JSONObject data = new JSONObject ();
 		data.AddField ("note_id", note_id);
 		data.AddField ("is_pressed", is_pressed);
@@ -194,6 +214,7 @@ public class Main : MonoBehaviour {
 	}
 
 	public void saveTrack(Track track){
+		Debug.Log ("saveTrack");
 		JSONObject data = new JSONObject(JsonUtility.ToJson (track));
 		socket.Emit("rockon:track", data);
 	}
@@ -201,6 +222,7 @@ public class Main : MonoBehaviour {
 
 
 	private void playNote(string instrument, int note_id, bool is_pressed){
+		Debug.Log ("playNote");
 		instruments [instrument].playNote (note_id, is_pressed);
 	}
 			
