@@ -57,16 +57,19 @@ public class Main : MonoBehaviour {
 	private void onRockOnNote(SocketIOEvent e){
 		Debug.Log ("onRockOnNote");
 		string playerID = "";
-		if (playerID == clientID) {
-			return;
-		}
+
 		e.data.GetField(ref playerID, "player_id");
 		int note_id = 0;
 		e.data.GetField (ref note_id, "note_id");
 		bool is_pressed = true;
 		e.data.GetField (ref is_pressed, "is_pressed");
 
-		Debug.Log (players [playerID].instrument);
+		if (playerID == clientID) {
+			Debug.Log ("avoid echo");
+			return;
+		}
+
+		//Debug.Log (players [playerID].instrument);
 		playNote (players [playerID].instrument, note_id, is_pressed);
 
 
