@@ -35,6 +35,7 @@ public class HitCollision : PhysicalInstrument  {
 				centerAudio.Play ();
 				main.noteHit(CENTER_NOTE_ID, true);
 			} else {
+				edgeAudio.Play ();
 				main.noteHit (EDGE_NOTE_ID, true);
 			}
 		}
