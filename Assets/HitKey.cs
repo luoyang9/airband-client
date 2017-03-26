@@ -7,6 +7,7 @@ public class HitKey : PhysicalInstrument {
 
 	public AudioSource centerAudio;
 	public int NOTE_ID;
+	private bool isPressed;
 	Main main;
 	// Use this for initialization
 	void Start () {

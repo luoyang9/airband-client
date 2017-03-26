@@ -8,11 +8,11 @@ public class LerpTransition : MonoBehaviour {
 		
 	}
 
-	public void StartTransition() {
-		StartCoroutine (Transition ());
+	public void StartTransition(Vector3 target, bool rot) {
+		StartCoroutine (Transition (target, rot));
 	}
 
-	public IEnumerator Transition() {
+	public IEnumerator Transition(Vector3 target, bool rot) {
 		float t = 0.0f;
 		Vector3 startingPos = transform.position;
 		Vector3 startingRot = transform.localEulerAngles;
@@ -21,8 +21,8 @@ public class LerpTransition : MonoBehaviour {
 			t += Time.deltaTime * (Time.timeScale/2.5f);
 
 
-			transform.position = Vector3.Lerp(startingPos, new Vector3 (0, 1, -2.9f), t);
-			transform.localEulerAngles = Vector3.Lerp(startingRot, new Vector3 (14, 0, 0), t);
+			transform.position = Vector3.Lerp(startingPos, target, t);
+			if(rot) transform.localEulerAngles = Vector3.Lerp(startingRot, new Vector3 (14, 0, 0), t);
 			yield return 0;
 		}
 	}
