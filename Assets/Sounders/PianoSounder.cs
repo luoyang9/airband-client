@@ -13,10 +13,10 @@ public class PianoSounder : Instrument{
 		sounds [0] = GameObject.Find ("A Key").GetComponent<AudioSource> ();
 		sounds [1] = GameObject.Find ("B Key").GetComponent<AudioSource> ();
 		sounds [2] = GameObject.Find ("C Key").GetComponent<AudioSource> ();
-		sounds [4] = GameObject.Find ("D Key").GetComponent<AudioSource> ();
-		sounds [5] = GameObject.Find ("E Key").GetComponent<AudioSource> ();
-		sounds [6] = GameObject.Find ("F Key").GetComponent<AudioSource> ();
-		sounds [7] = GameObject.Find ("G Key").GetComponent<AudioSource> ();
+		sounds [3] = GameObject.Find ("D Key").GetComponent<AudioSource> ();
+		sounds [4] = GameObject.Find ("E Key").GetComponent<AudioSource> ();
+		sounds [5] = GameObject.Find ("F Key").GetComponent<AudioSource> ();
+		sounds [6] = GameObject.Find ("G Key").GetComponent<AudioSource> ();
 	}
 
 	public void playNote(int id, bool is_pressed){
