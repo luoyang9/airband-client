@@ -44,6 +44,7 @@ public class PickTrack :PhysicalInstrument {
 				GameObject.Find ("BongoDisplay").GetComponent<NoteDisplay> ().setTrack ((Track)main.tracks[0]);
 				GameObject.Find ("BongoDisplay").GetComponent<NoteDisplay> ().trackStart ();
 			}
+			GetComponent<AudioSource> ().Play ();
 
 			gameCamera.GetComponent<LerpTransition> ().StartTransition(new Vector3 (0, 1, -2.9f), true);
 			hand.transform.position = handPosition;

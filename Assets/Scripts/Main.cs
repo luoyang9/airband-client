@@ -62,10 +62,10 @@ public class Main : MonoBehaviour {
 			string thumbnail_file = track.GetField("thumbnail_file").ToString();
 			string audio_file = track.GetField("audio_file").ToString();
 			int duration = 0; // HACK
-			ArrayList arrnotes = new ArrayList();
+			List<Note> arrnotes = new List<Note>();
 			for (int y = 0; y < notes.Count; y++) {
 				Note note = JsonUtility.FromJson<Note>(notes[y].ToString());
-				arrnotes.Add(notes);
+				arrnotes.Add(note);
 			}
 			Track realTrack = new Track (id, instrument, name, artist, thumbnail_file, audio_file, duration, arrnotes);
 			tracks.Add (realTrack);
