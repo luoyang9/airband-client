@@ -26,7 +26,7 @@ public class Main : MonoBehaviour {
 
 
 	void Start () {
-		GameObject go = GameObject.Find ("SocketIO");
+		GameObject go = GameObject.Find ("Main");
 		socket = go.GetComponent<SocketIOComponent>();
 
 

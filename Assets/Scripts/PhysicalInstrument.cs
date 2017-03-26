@@ -8,7 +8,7 @@ namespace AssemblyCSharp
 		//public Main main;
 
 		protected Main getMain(){
-			return GameObject.Find ("SocketIO").GetComponent<Main> ();
+			return GameObject.Find ("Main").GetComponent<Main> ();
 		}
 	}
 }

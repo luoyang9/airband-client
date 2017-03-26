@@ -10,7 +10,7 @@ public class PickInstrument : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		switch (ChallengeChoice.choice) {
+		switch (GoToGame.choice) {
 		case "piano":
 			Instantiate (piano);
 					break;
