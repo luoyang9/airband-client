@@ -55,7 +55,10 @@ public class GoToGame : MonoBehaviour {
 		hand.handMovementScale = handMovementScale;
 		if (mode == "challenge") {
 			//challenge stuff
-		} 
+		} else {
+			Main main = GameObject.Find ("Main").GetComponent<Main> ();
+			main.onRockOnJoin (instrument.name.ToLower ());
+		}
 	}
 
 	public void SetGameMode(string mode) {

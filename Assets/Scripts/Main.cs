@@ -56,6 +56,9 @@ public class Main : MonoBehaviour {
 
 	private void onRockOnNote(SocketIOEvent e){
 		string playerID = "";
+		if (playerID == clientID) {
+			return;
+		}
 		e.data.GetField(ref playerID, "player_id");
 		int note_id = 0;
 		e.data.GetField (ref note_id, "note_id");
@@ -69,11 +72,11 @@ public class Main : MonoBehaviour {
 		instruments ["bongo"].playNote (note_id, is_pressed);
 
 	}
-
+	/*
 	private void onRockOnStart(SocketIOEvent e){
 		currentTrack = JsonUtility.FromJson<Track> (e.data.GetField ("track").ToString());
 		// do stuff to start rock on
-	}
+	}*/
 
 	public void joinRockOn(string instrument){
 		JSONObject data = new JSONObject ();
@@ -82,7 +85,7 @@ public class Main : MonoBehaviour {
 		// Change ui
 	}
 	
-	public void onRockOnJoin(SocketIOEvent e){
+	private void onRockOnJoin(SocketIOEvent e){
 		players = new Dictionary<string, Player> ();
 		int count = e.data.GetField ("players").Count;
 		for (int x = 0; x < count; x++) {
@@ -158,6 +161,10 @@ public class Main : MonoBehaviour {
 		e.data.GetField (ref score, "score");
 		e.data.GetField (ref note_id, "note_id");
 		e.data.GetField (ref is_pressed, "is_pressed");
+
+		if (player_id == clientID) {
+			return;
+		}
 
 		chalPlayers [player_id].score += score;
 		playNote (currentTrack.instrument, note_id, is_pressed);

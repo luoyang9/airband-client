@@ -27,6 +27,5 @@ public class BongoSounder : Instrument{
 	public void playNote(int idx, bool is_pressed){
 		Debug.Assert(idx < sounds.Length);
 		sounds [idx].Play ();
-
 	}
 }
