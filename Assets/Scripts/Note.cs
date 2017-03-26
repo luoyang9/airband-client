@@ -3,7 +3,7 @@
 namespace AssemblyCSharp
 {
 	[Serializable]
-	public class Note
+	public class Note : Object
 	{
 		public int id;
 		public int offset;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using AssemblyCSharp;
+using System;
 
 public class NoteDisplay : MonoBehaviour {
 
@@ -10,7 +11,7 @@ public class NoteDisplay : MonoBehaviour {
 
 	private NoteSpawner[] note_spawners;
 	private Track track;
-	private Object[] track_note;
+	private List<Note> track_note;
 
 	private bool playing = false;
 	private float startTime;
@@ -62,7 +63,7 @@ public class NoteDisplay : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (playing) {
-			if (noteIdx >= track_note.Length) {
+			if (noteIdx >= track_note.Count) {
 				this.trackStop();
 				return;
 			}
@@ -79,7 +80,7 @@ public class NoteDisplay : MonoBehaviour {
 	}
 	public void setTrack(Track track){
 		this.track = track;
-		track_note = (Note[])track.notes.ToArray();
+		track_note = track.notes;
 	}
 
 	public void trackStart(){

@@ -16,10 +16,10 @@ namespace AssemblyCSharp
 		public String thumbnail_file;
 		public String audio_file;
 		int duration;
-		public ArrayList notes;
+		public List<Note> notes;
 
 		public Track (String id, String instrument, String name, String artist, String thumbnail_file, String audio_file,
-			int duration, ArrayList notes)
+			int duration, List<Note> notes)
 		{
 			this.id = id;
 			this.instrument = instrument;
