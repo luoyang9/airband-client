@@ -64,6 +64,8 @@ public class Main : MonoBehaviour {
 		bool is_pressed = true;
 		e.data.GetField (ref is_pressed, "is_pressed");
 
+		Debug.Log ("player id: " + playerID + "client_id : " + clientID);
+
 		if (playerID == clientID) {
 			Debug.Log ("avoid echo");
 			return;
@@ -92,7 +94,7 @@ public class Main : MonoBehaviour {
 
 	public void onRockOnJoin(SocketIOEvent e){
 		Debug.Log ("onRockOnJoin");
-		clientID = e.data.GetField ("you").ToString ();
+		e.data.GetField (ref clientID, "you");
 		Debug.Log ("Set id as " + clientID);
 		players = new Dictionary<string, Player> ();
 
