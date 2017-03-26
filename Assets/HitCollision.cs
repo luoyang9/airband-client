@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HitCollision : MonoBehaviour {
 
-	public AudioSource audio;
+	public AudioSource centerAudio;
 	public AudioSource edgeAudio;
 
 	private bool centerTriggered;
@@ -23,7 +23,7 @@ public class HitCollision : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 		if(isHand(col)) {
 			if (centerTriggered) {
-				audio.Play ();
+				centerAudio.Play ();
 			} else {
 				edgeAudio.Play ();
 			}

@@ -10,17 +10,6 @@ public class PickInstrument : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		switch (GoToGame.choice) {
-		case "piano":
-			Instantiate (piano);
-					break;
-		case "bongos":
-			Instantiate (bongos);
-					break;
-		case "drums":
-			Instantiate (drums);
-					break;
-		}
 	}
 	
 	// Update is called once per frame

@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GoToGame : MonoBehaviour {
-	
-	public static string choice;
 
 	private string mode;
 
-	public string instrument;
+	public GameObject instrument;
+	public Camera gameCamera;
+	public HandController hand;
 
 	// Use this for initialization
 	void Start () {
@@ -28,22 +28,28 @@ public class GoToGame : MonoBehaviour {
 	}
 
 	void StartGame() {
-		if (mode == "challenge") {
-			choice = instrument;
-			SceneManager.LoadScene ("Challenge");
-		} else if (mode == "freestyle") {
-			switch (instrument) {
-			case "piano":
-				SceneManager.LoadScene ("piano");
-				break;
-			case "drums":
-				SceneManager.LoadScene ("drums-backup");
-				break;
-			case "bongos":
-				SceneManager.LoadScene ("bongos-backup");
-				break;
-			}
+		instrument.SetActive (true);
+
+		Vector3 handMovementScale;
+		Vector3 handPosition;
+		if (instrument.gameObject.name == "Drums") {
+			handMovementScale = new Vector3 (4, 4, 4);
+			handPosition = new Vector3 (0, -0.2f, -1.926f); 
+		} else if(instrument.gameObject.name == "Piano"){
+			handMovementScale = new Vector3 (1.3f, 1.3f, 1.3f);
+			handPosition = new Vector3 (0, 0.2f, -1.926f);
+		} else {
+			handMovementScale = new Vector3 (1, 1, 1);
+			handPosition = new Vector3 (0, 0.4f, -1.926f);
 		}
+
+		gameCamera.GetComponent<LerpTransition> ().StartTransition();
+		hand.transform.position = handPosition;
+		hand.transform.localScale = new Vector3 (1, 1, 1);
+		hand.handMovementScale = handMovementScale;
+		if (mode == "challenge") {
+			//challenge stuff
+		} 
 	}
 
 	public void SetGameMode(string mode) {
