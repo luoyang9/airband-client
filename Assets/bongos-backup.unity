@@ -2216,12 +2216,12 @@ Prefab:
     - target: {fileID: 82351781854615326, guid: aa80b5eb2a1784cf4bc5296b48f21bd5,
         type: 2}
       propertyPath: Loop
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 82351781854615326, guid: aa80b5eb2a1784cf4bc5296b48f21bd5,
         type: 2}
       propertyPath: m_PlayOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114239055303977070, guid: aa80b5eb2a1784cf4bc5296b48f21bd5,
         type: 2}
