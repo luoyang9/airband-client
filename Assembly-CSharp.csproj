@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{BB48CC65-F467-C347-9D59-8F9F33F14782}</ProjectGuid>
+    <ProjectGuid>{3F5DAC6A-740F-530B-4723-C220444BB1C7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,11 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
      <Compile Include="Assets\BongoSounder.cs" />
-     <Compile Include="Assets\ChallengeChoice.cs" />
-=======
->>>>>>> master
      <Compile Include="Assets\GoToGame.cs" />
      <Compile Include="Assets\HiCenterCollisionHit.cs" />
      <Compile Include="Assets\HiHitCollision.cs" />
@@ -361,10 +357,10 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="MySynthesizer">
- <HintPath>/Users/czhang/Development/VR-Instruments/Assets/MySynthesizer/plugins/MySynthesizer.dll</HintPath>
+ <HintPath>/Users/Janine/GitHub/LeapBand/Assets/MySynthesizer/plugins/MySynthesizer.dll</HintPath>
  </Reference>
  <Reference Include="LeapCSharp.NET3.5">
- <HintPath>/Users/czhang/Development/VR-Instruments/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+ <HintPath>/Users/Janine/GitHub/LeapBand/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
