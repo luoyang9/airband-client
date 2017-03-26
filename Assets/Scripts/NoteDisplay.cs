@@ -10,7 +10,7 @@ public class NoteDisplay : MonoBehaviour {
 
 	private NoteSpawner[] note_spawners;
 	private Track track;
-	private ArrayList track_note;
+	private Object[] track_note;
 
 	private bool playing = false;
 	private float startTime;
@@ -32,28 +32,28 @@ public class NoteDisplay : MonoBehaviour {
 			note_spawners [x].setJourneyTime (this.journeyTime);
 			note_spawners [x].setNoteObject (this.note_object);
 		}
-		ArrayList notelist = new ArrayList ();
-		notelist.Add(new Note (0, 5000, true));
-		notelist.Add(new Note (0, 7000, true));
-		notelist.Add(new Note (0, 8000, true));
-		notelist.Add(new Note (0, 10000, true));
-		notelist.Add(new Note (1, 5000, true));
-		notelist.Add(new Note (1, 7000, true));
-		notelist.Add(new Note (1, 8000, true));
-		notelist.Add(new Note (1, 10000, true));
-		notelist.Add(new Note (2, 5000, true));
-		notelist.Add(new Note (2, 7000, true));
-		notelist.Add(new Note (2, 8000, true));
-		notelist.Add(new Note (2, 10000, true));
-		notelist.Add(new Note (3, 5000, true));
-		notelist.Add(new Note (3, 7000, true));
-		notelist.Add(new Note (3, 8000, true));
-		notelist.Add(new Note (3, 10000, true));
-
-		Track testTrack = new Track ("abc", "Guitar", "hello", "Tyler", "whatever.jpg", "abc.mp3", 1000,
-			                  notelist);
-		this.setTrack (testTrack);
-		this.trackStart ();
+//		ArrayList notelist = new ArrayList ();
+//		notelist.Add(new Note (0, 5000, true));
+//		notelist.Add(new Note (0, 7000, true));
+//		notelist.Add(new Note (0, 8000, true));
+//		notelist.Add(new Note (0, 10000, true));
+//		notelist.Add(new Note (1, 5000, true));
+//		notelist.Add(new Note (1, 7000, true));
+//		notelist.Add(new Note (1, 8000, true));
+//		notelist.Add(new Note (1, 10000, true));
+//		notelist.Add(new Note (2, 5000, true));
+//		notelist.Add(new Note (2, 7000, true));
+//		notelist.Add(new Note (2, 8000, true));
+//		notelist.Add(new Note (2, 10000, true));
+//		notelist.Add(new Note (3, 5000, true));
+//		notelist.Add(new Note (3, 7000, true));
+//		notelist.Add(new Note (3, 8000, true));
+//		notelist.Add(new Note (3, 10000, true));
+//
+//		Track testTrack = new Track ("abc", "Guitar", "hello", "Tyler", "whatever.jpg", "abc.mp3", 1000,
+//			                  notelist);
+//		this.setTrack (testTrack);
+//		this.trackStart ();
 
 	}
 
@@ -62,14 +62,14 @@ public class NoteDisplay : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (playing) {
-			if (noteIdx >= track_note.Count) {
+			if (noteIdx >= track_note.Length) {
 				this.trackStop();
 				return;
 			}
 
 			float offsetTime = Time.realtimeSinceStartup * 1000 - startTime;
 
-			Note nextNote = (Note)track_note [noteIdx];
+			Note nextNote = track_note [noteIdx];
 
 			if (offsetTime > nextNote.offset) {	// Time to play the next note
 				noteIdx ++;
@@ -77,12 +77,12 @@ public class NoteDisplay : MonoBehaviour {
 			}
 		}
 	}
-	void setTrack(Track track){
+	public void setTrack(Track track){
 		this.track = track;
-		track_note = track.notes;
+		track_note = (Note[])track.notes.ToArray();
 	}
 
-	void trackStart(){
+	public void trackStart(){
 		Debug.Assert (this.track != null);
 
 		startTime = Time.realtimeSinceStartup * 1000;
@@ -90,7 +90,7 @@ public class NoteDisplay : MonoBehaviour {
 		playing = true;
 	}
 
-	void trackStop(){
+	public void trackStop(){
 		playing = false;
 		// @Todo: clear up unused assets
 	}
