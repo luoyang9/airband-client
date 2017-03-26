@@ -39,7 +39,7 @@ public class Main : MonoBehaviour {
 		socket.On ("rockon:join", onRockOnJoin);
 		socket.On ("rockon:player_join", onRockOnPlayerJoin);
 		socket.On ("rockon:note", onRockOnNote);
-		socket.On ("rockon:track", onRockOnStart);
+		//socket.On ("rockon:track", onRockOnStart);
 		socket.On ("challenge:join", onJoinChallenge);
 		socket.On ("challenge:player_join", onChallengePlayerJoin);
 		socket.On ("challenge:ready", onChallengeReady);
