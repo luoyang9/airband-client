@@ -14,10 +14,6 @@ public class PickTrack : MonoBehaviour {
 	void Start () {
 	}
 
-	public void SetInstrument(GameObject instrument) {
-		this.instrument = instrument;
-	}
-
 	void OnTriggerEnter(Collider col) {	
 		GameObject cam = GameObject.Find ("Camera");
 		if (col.name == "bone3" && col.transform.parent.gameObject.name == "middle" && cam.transform.position.x > 0 ) {
@@ -26,18 +22,13 @@ public class PickTrack : MonoBehaviour {
 			Vector3 handMovementScale;
 			Vector3 handPosition;
 
-			GameObject newInstrument = Instantiate (instrument);
-
-			if (newInstrument.gameObject.name == "Drums(Clone)") {
-				handMovementScale = new Vector3 (4, 4, 4);
-				handPosition = new Vector3 (0, -0.2f, -1.926f); 
-				newInstrument.transform.position = new Vector3 (0, -0.8137832f, -1.23f);
-			} else if(newInstrument.gameObject.name == "Piano(Clone)"){
+			if (track == "odetojoy") {
+				GameObject newInstrument = Instantiate (GameObject.Find("Piano"));
 				handMovementScale = new Vector3 (1.3f, 1.3f, 1.3f);
 				handPosition = new Vector3 (0, 0.2f, -1.926f);
 				newInstrument.transform.position = new Vector3 (0, 0, -1.9f);
 			} else {
-				Debug.Log (newInstrument.gameObject.name);
+				GameObject newInstrument = Instantiate (GameObject.Find("Bongos"));	Debug.Log (newInstrument.gameObject.name);
 				handMovementScale = new Vector3 (1, 1, 1);
 				handPosition = new Vector3 (0, 0.4f, -1.926f);
 				newInstrument.transform.position = new Vector3 (-2.188605f, -3.370371f, -0.1664743f);
@@ -49,7 +40,7 @@ public class PickTrack : MonoBehaviour {
 			hand.handMovementScale = handMovementScale;
 
 			Main main = GameObject.Find ("Main").GetComponent<Main> ();
-			main.joinRockOn (instrument.name.ToLower ());
+			main.joinChallenge ();
 		}
 	}
 

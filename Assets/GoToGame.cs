@@ -32,9 +32,6 @@ public class GoToGame : MonoBehaviour {
 			gameCamera.GetComponent<LerpTransition> ().StartTransition(new Vector3 (1.22f, 3.27f, 5.77f), false);
 			hand.transform.position = new Vector3 (1.42f, 2.52f, 7.31f);
 
-			GameObject.Find ("Pina Colada").GetComponent<PickTrack> ().SetInstrument (instrument);
-			GameObject.Find ("Ode to Joy").GetComponent<PickTrack> ().SetInstrument (instrument);
-
 		} else {
 			
 			Vector3 handMovementScale;

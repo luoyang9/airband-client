@@ -17,15 +17,21 @@ public class PickInstrumentClick : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col) {
 		if (col.name == "bone3" && col.transform.parent.gameObject.name == "middle") {
-			pianoBtn.gameObject.SetActive (true);
-			bongoBtn.gameObject.SetActive (true);
-			drumBtn.gameObject.SetActive (true);
-			pianoBtn.gameObject.GetComponent<GoToGame> ().SetGameMode (mode);
-			bongoBtn.gameObject.GetComponent<GoToGame> ().SetGameMode (mode);
-			drumBtn.gameObject.GetComponent<GoToGame> ().SetGameMode (mode);
+			if (mode == "challenge") {
+				
+				GameObject.Find("Camera").GetComponent<LerpTransition> ().StartTransition (new Vector3 (1.22f, 3.27f, 5.77f), false);
+				GameObject.Find("HandController").transform.position = new Vector3 (1.42f, 2.52f, 7.31f);
+			} else {
+				pianoBtn.gameObject.SetActive (true);
+				bongoBtn.gameObject.SetActive (true);
+				drumBtn.gameObject.SetActive (true);
+				pianoBtn.gameObject.GetComponent<GoToGame> ().SetGameMode (mode);
+				bongoBtn.gameObject.GetComponent<GoToGame> ().SetGameMode (mode);
+				drumBtn.gameObject.GetComponent<GoToGame> ().SetGameMode (mode);
 
-			gameObject.SetActive(false);
-			freeStyleBtn.SetActive (false);
+				gameObject.SetActive (false);
+				freeStyleBtn.SetActive (false);
+			}
 		}
 	}
 	
