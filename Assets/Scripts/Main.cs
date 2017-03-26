@@ -31,7 +31,7 @@ public class Main : MonoBehaviour {
 
 
 		instruments = new Dictionary<string, Instrument> ();
-
+		instruments.Add("bongo", gameObject.GetComponent<BongoSounder>();
 
 		socket.On ("init", onInit);
 		socket.On ("rockon:join", onRockOnJoin);
