@@ -204,6 +204,7 @@
      <Compile Include="Assets\PlayCymbal.cs" />
      <Compile Include="Assets\PlayCymbal2.cs" />
      <Compile Include="Assets\PlayCymbalHit.cs" />
+     <Compile Include="Assets\ReadyButton.cs" />
      <Compile Include="Assets\ResetGame.cs" />
      <Compile Include="Assets\Score.cs" />
      <Compile Include="Assets\Scripts\ChallengePlayers.cs" />
