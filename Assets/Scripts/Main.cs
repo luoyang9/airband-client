@@ -66,6 +66,8 @@ public class Main : MonoBehaviour {
 		//playNote (players [playerID].instrument, note_id, is_pressed);
 		Debug.Log ("back");
 
+		instruments ["bongo"].playNote (note_id, is_pressed);
+
 	}
 
 	private void onRockOnStart(SocketIOEvent e){
