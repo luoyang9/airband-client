@@ -46,7 +46,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BongoSounder.cs" />
      <Compile Include="Assets\GoToGame.cs" />
      <Compile Include="Assets\HiCenterCollisionHit.cs" />
      <Compile Include="Assets\HiHitCollision.cs" />
@@ -297,6 +296,9 @@
      <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketFrame.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketState.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketStream.cs" />
+     <Compile Include="Assets\Sounders\BongoSounder.cs" />
+     <Compile Include="Assets\Sounders\DrumSounder.cs" />
+     <Compile Include="Assets\Sounders\PianoSounder.cs" />
      <Compile Include="Assets\Tom1Hit.cs" />
      <Compile Include="Assets\Tom2Hit.cs" />
      <Compile Include="Assets\Tom3Hit.cs" />

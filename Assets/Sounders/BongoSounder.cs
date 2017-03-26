@@ -9,7 +9,7 @@ public class BongoSounder : Instrument{
 	private AudioSource[] sounds;
 	string instrument_name;
 
-	BongoSounder(){
+	public BongoSounder(){
 		this.instrument_name = "Bongo";	
 		//AudioSource[] 
 		AudioSource[] highDrum = GameObject.Find ("Hi Drum").GetComponents<AudioSource>();
