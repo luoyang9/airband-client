@@ -75,7 +75,6 @@ public class Main : MonoBehaviour {
 	private void onRockOnNote(SocketIOEvent e){
 		Debug.Log ("onRockOnNote");
 		string playerID = "";
-
 		e.data.GetField(ref playerID, "player_id");
 		int note_id = 0;
 		e.data.GetField (ref note_id, "note_id");
@@ -88,6 +87,10 @@ public class Main : MonoBehaviour {
 			Debug.Log ("avoid echo");
 			return;
 		}
+
+		Debug.Log (playerID);
+		Debug.Log (players.ToString ()); 	 
+		Debug.Log (players [playerID].ToString ());
 
 		//Debug.Log (players [playerID].instrument);
 		playNote (players [playerID].instrument, note_id, is_pressed);
@@ -142,9 +145,17 @@ public class Main : MonoBehaviour {
 		//refresh display
 	}
 
+	private void onRockOnLeave(SocketIOEvent e){
+		string player_id = e.data.GetField ("player_id").ToString();
+
+		players.Remove (player_id);
+	}
+
 	public void leaveRockOn(){
 		socket.Emit ("rockon:leave");
 	}
+
+
 
 	public void joinChallenge(){
 		socket.Emit ("challenge:join");
