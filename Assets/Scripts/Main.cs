@@ -9,7 +9,7 @@ public class Main : MonoBehaviour {
 	SocketIOComponent socket;
 	Dictionary<string, Instrument> instruments;
 
-	Track[] tracks;
+	ArrayList tracks;
 	Dictionary<string, Player> players;
 	Dictionary<string, ChallengePlayer> chalPlayers;
 	bool client_ready;
@@ -48,12 +48,28 @@ public class Main : MonoBehaviour {
 		Debug.Log ("Sockets opened");
 	}
 
-	private void onInit(SocketIOEvent e){
-		tracks = JsonUtility.FromJson<Track[]> (e.data.ToString());
-
-
-
-		Debug.Log (e.data);
+	private void onInit(SocketIOEvent e) {
+		tracks = new ArrayList();
+		int count = e.data.GetField ("tracks").Count;
+		// totally a hack, there's 1 hour 30 minutes left :)
+		for (int x = 0; x < count; x++) {
+			JSONObject track = e.data.GetField("tracks")[x];
+			JSONObject notes = track.GetField("notes");
+			string id = track.GetField("id").ToString();
+			string instrument = track.GetField("instrument").ToString();
+			string name = track.GetField("name").ToString();
+			string artist = track.GetField("artist").ToString();
+			string thumbnail_file = track.GetField("thumbnail_file").ToString();
+			string audio_file = track.GetField("audio_file").ToString();
+			int duration = 0; // HACK
+			ArrayList arrnotes = new ArrayList();
+			for (int y = 0; y < notes.Count; y++) {
+				Note note = JsonUtility.FromJson<Note>(notes[y].ToString());
+				arrnotes.Add(notes);
+			}
+			Track realTrack = new Track (id, instrument, name, artist, thumbnail_file, audio_file, duration, arrnotes);
+			tracks.Add (realTrack);
+		}
 	}
 
 	private void onRockOnNote(SocketIOEvent e){

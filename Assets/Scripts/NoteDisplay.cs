@@ -34,23 +34,23 @@ public class NoteDisplay : MonoBehaviour {
 		}
 		ArrayList notelist = new ArrayList ();
 		notelist.Add(new Note (0, 5000, true));
-		notelist.Add( new Note (0, 7000, true));
-		notelist.Add( new Note (0, 8000, true));
-		notelist.Add( new Note (0, 10000, true));
+		notelist.Add(new Note (0, 7000, true));
+		notelist.Add(new Note (0, 8000, true));
+		notelist.Add(new Note (0, 10000, true));
 		notelist.Add(new Note (1, 5000, true));
 		notelist.Add(new Note (1, 7000, true));
-		notelist.Add( new Note (1, 8000, true));
+		notelist.Add(new Note (1, 8000, true));
 		notelist.Add(new Note (1, 10000, true));
 		notelist.Add(new Note (2, 5000, true));
 		notelist.Add(new Note (2, 7000, true));
-		notelist.Add( new Note (2, 8000, true));
+		notelist.Add(new Note (2, 8000, true));
 		notelist.Add(new Note (2, 10000, true));
-		notelist.Add( new Note (3, 5000, true));
+		notelist.Add(new Note (3, 5000, true));
 		notelist.Add(new Note (3, 7000, true));
 		notelist.Add(new Note (3, 8000, true));
-		notelist.Add( new Note (3, 10000, true));
+		notelist.Add(new Note (3, 10000, true));
 
-		Track testTrack = new Track ("abc", "Guitar", "hello", "whatever.jpg", "abc.mp3", 1000,
+		Track testTrack = new Track ("abc", "Guitar", "hello", "Tyler", "whatever.jpg", "abc.mp3", 1000,
 			                  notelist);
 		this.setTrack (testTrack);
 		this.trackStart ();
