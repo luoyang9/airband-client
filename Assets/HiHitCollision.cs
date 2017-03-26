@@ -1,16 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using AssemblyCSharp;
 
-public class HiHitCollision : MonoBehaviour {
+public class HiHitCollision : PhysicalInstrument {
 
 	public AudioSource centerAudio;
 	public AudioSource edgeAudio;
 
+	public int CENTER_NOTE_ID = 2;
+	public int EDGE_NOTE_ID = 3;
+	Main main;
+
 	private bool centerTriggered;
 
-	void Start() {
+	void Awake() {
 		centerTriggered = false;
+	}
+	void Start(){
+		main = getMain ();
+		Debug.Assert (main != null);
 	}
 
 	private bool isHand(Collider col) {
@@ -24,8 +33,9 @@ public class HiHitCollision : MonoBehaviour {
 		if(isHand(col)) {
 			if (centerTriggered) {
 				centerAudio.Play ();
+				main.noteHit (CENTER_NOTE_ID, true);
 			} else {
-				edgeAudio.Play ();
+				main.noteHit (EDGE_NOTE_ID, true);
 			}
 		}
 	}

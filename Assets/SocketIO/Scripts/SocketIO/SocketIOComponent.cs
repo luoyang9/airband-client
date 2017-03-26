@@ -172,6 +172,8 @@ namespace SocketIO
 		{
 			connected = true;
 
+			Debug.Log ("Connecting");
+
 			socketThread = new Thread(RunSocketThread);
 			socketThread.Start(ws);
 

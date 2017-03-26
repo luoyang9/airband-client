@@ -51,6 +51,7 @@
      <Compile Include="Assets\HiHitCollision.cs" />
      <Compile Include="Assets\HitCollision.cs" />
      <Compile Include="Assets\HitKey.cs" />
+     <Compile Include="Assets\Instruments\Script\Bongo.cs" />
      <Compile Include="Assets\LeapMotion\DemoResources\Scripts\AerodynamicLeaf.cs" />
      <Compile Include="Assets\LeapMotion\DemoResources\Scripts\BugReporter.cs" />
      <Compile Include="Assets\LeapMotion\DemoResources\Scripts\ChangeMaterialOnGrab.cs" />
@@ -196,6 +197,7 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRSceneSampleController.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRTrackerBounds.cs" />
+     <Compile Include="Assets\PhysicalButton.cs" />
      <Compile Include="Assets\PickInstrument.cs" />
      <Compile Include="Assets\PickInstrumentClick.cs" />
      <Compile Include="Assets\PlayCymbal.cs" />
@@ -210,6 +212,7 @@
      <Compile Include="Assets\Scripts\NoteObject.cs" />
      <Compile Include="Assets\Scripts\NoteSpawner.cs" />
      <Compile Include="Assets\Scripts\PhysicalButton.cs" />
+     <Compile Include="Assets\Scripts\PhysicalInstrument.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Track.cs" />
      <Compile Include="Assets\SnareHit.cs" />
